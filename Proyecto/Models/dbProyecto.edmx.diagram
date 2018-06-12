@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="03720c0c9f4642d281c566442dde685a" Name="Diagram1">
+        <EntityTypeShape EntityType="nsProyecto.AlineacionPartido" Width="1.5" PointX="3" PointY="52.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.AnotadorPartido" Width="1.5" PointX="6" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Arbitro" Width="1.5" PointX="8.25" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.CambioPartido" Width="1.5" PointX="6" PointY="48.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Categoria" Width="1.5" PointX="3" PointY="57.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Competicion" Width="1.5" PointX="5.25" PointY="77.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Contratacion" Width="1.5" PointX="6" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Direccion" Width="1.5" PointX="3" PointY="69.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Entrenador" Width="1.5" PointX="3" PointY="49.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.EntrenadorTitulo" Width="1.5" PointX="5.25" PointY="82.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Equipo" Width="1.5" PointX="5.25" PointY="66.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.EquipoTorneo" Width="1.5" PointX="13.75" PointY="73.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Especialidad" Width="1.5" PointX="3" PointY="83.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.EspecialidadJugador" Width="1.5" PointX="15.75" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Fecha" Width="1.5" PointX="16.75" PointY="70.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Federacion" Width="1.5" PointX="3" PointY="86.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.FuncionarioCorreo" Width="1.5" PointX="9" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.FuncionarioDeportivo" Width="1.5" PointX="8.25" PointY="75.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.FuncionarioDireccion" Width="1.5" PointX="8.25" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_AlineacionPartido" Width="1.5" PointX="9.75" PointY="69.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_AnotadorPartido" Width="1.5" PointX="10.75" PointY="73.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_CambioPartido" Width="1.5" PointX="12.75" PointY="70.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_EquipoTorneo" Width="1.5" PointX="7.5" PointY="67.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_Fecha" Width="1.5" PointX="7.5" PointY="81.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_Partido" Width="1.5" PointX="7.5" PointY="70.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_PartidoArbitro" Width="1.5" PointX="10.5" PointY="63.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_Torneo" Width="1.5" PointX="5.25" PointY="63.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Jugador" Width="1.5" PointX="13.5" PointY="64.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Oferta" Width="1.5" PointX="13.5" PointY="60" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Partido" Width="1.5" PointX="19" PointY="59.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.PartidoArbitro" Width="1.5" PointX="10.5" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Persona" Width="1.5" PointX="3" PointY="99.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.SocioEquipo" Width="1.5" PointX="10.5" PointY="76.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Temporada" Width="1.5" PointX="3" PointY="103.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.TipoCompeticion" Width="1.5" PointX="3" PointY="106.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.TituloAcademico" Width="1.5" PointX="3" PointY="110.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Torneo" Width="1.5" PointX="7.5" PointY="90.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Usuario" Width="1.5" PointX="0.75" PointY="49.375" IsExpanded="true" />
+        <AssociationConnector Association="nsProyecto.AlineacionPartido_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AlineacionPartido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AlineacionPartido_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AlineacionPartido_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AlineacionPartido_FK5" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AnotadorPartido_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AnotadorPartido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AnotadorPartido_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.AnotadorPartido_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Arbitro_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Arbitro_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Arbitro_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_PartidoArbitro_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.PartidoArbitro_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.CambioPartido_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.CambioPartido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.CambioPartido_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.CambioPartido_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.CambioPartido_FK5" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Categoria_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Categoria_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Competicion_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Competicion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Competicion_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Torneo_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Contratacion_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Contratacion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Contratacion_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Contratacion_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Direccion_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Direccion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.JugadorDireccion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Entrenador_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Entrenador_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Entrenador_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EntrenadorTitulo_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EntrenadorTitulo_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EntrenadorTitulo_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EntrenadorTitulo_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Equipo_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Equipo_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Equipo_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EquipoCompeticion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_AlineacionPartido_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_EquipoTorneo_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_Partido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_Partido_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Jugador_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Oferta_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Partido_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Partido_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.SocioEquipo_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EquipoCompeticion_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EquipoCompeticionTemporada_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EquipoCompeticionTemporada_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Especialidad_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Especialidad_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EspecialidadJugador_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EspecialidadJugador_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EspecialidadJugador_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.EspecialidadJugador_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Fecha_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Fecha_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Fecha_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Partido_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Federacion_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Federacion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioCorreo_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioCorreo_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioCorreo_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioDeportivo_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioDeportivo_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioDeportivo_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Jugador_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.JugadorDireccion_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Oferta_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioDireccion_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.FuncionarioDireccion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_AlineacionPartido_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_AlineacionPartido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_AnotadorPartido_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_AnotadorPartido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_CambioPartido_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_CambioPartido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_CambioPartido_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_EquipoTorneo_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_Fecha_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Hist_PartidoArbitro_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Jugador_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Jugador_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Oferta_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Oferta_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Partido_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Partido_FK5" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.PartidoArbitro_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.PartidoArbitro_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.PartidoArbitro_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Persona_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Persona_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.SocioEquipo_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Usuario_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.SocioEquipo_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.SocioEquipo_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Temporada_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Temporada_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.Torneo_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.TipoCompeticion_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.TipoCompeticion_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.TituloAcademico_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="nsProyecto.TituloAcademico_FK2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

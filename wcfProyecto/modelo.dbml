@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Proyecto" EntityNamespace="enProyecto" ContextNamespace="cnProyecto" Class="dcProyecto" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SQLMASTER\SQLMASTER;Initial Catalog=Proyecto;Persist Security Info=True;User ID=sa;TrustServerCertificate=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ProyectoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="Caso3Schema.AlineacionPartido" Member="AlineacionPartidos">
+    <Type Name="AlineacionPartido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Usuario_AlineacionPartido" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_AlineacionPartido1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Equipo_AlineacionPartido" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Jugador_AlineacionPartido" Member="Jugador" ThisKey="codPersona" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+      <Association Name="Partido_AlineacionPartido" Member="Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Partido" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Usuario" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="login" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_AlineacionPartido" Member="AlineacionPartidos" ThisKey="login" OtherKey="usuarioCreador" Type="AlineacionPartido" />
+      <Association Name="Usuario_AlineacionPartido1" Member="AlineacionPartidos1" ThisKey="login" OtherKey="usuarioModificador" Type="AlineacionPartido" />
+      <Association Name="Usuario_AnotadorPartido" Member="AnotadorPartidos" ThisKey="login" OtherKey="usuarioCreador" Type="AnotadorPartido" />
+      <Association Name="Usuario_AnotadorPartido1" Member="AnotadorPartidos1" ThisKey="login" OtherKey="usuarioModificador" Type="AnotadorPartido" />
+      <Association Name="Usuario_Arbitro" Member="Arbitros" ThisKey="login" OtherKey="usuarioModificador" Type="Arbitro" />
+      <Association Name="Usuario_Arbitro1" Member="Arbitros1" ThisKey="login" OtherKey="usuarioCreador" Type="Arbitro" />
+      <Association Name="Usuario_CambioPartido" Member="CambioPartidos" ThisKey="login" OtherKey="usuarioModificador" Type="CambioPartido" />
+      <Association Name="Usuario_CambioPartido1" Member="CambioPartidos1" ThisKey="login" OtherKey="usuarioCreador" Type="CambioPartido" />
+      <Association Name="Usuario_Categoria" Member="Categorias" ThisKey="login" OtherKey="usuarioModificador" Type="Categoria" />
+      <Association Name="Usuario_Categoria1" Member="Categorias1" ThisKey="login" OtherKey="usuarioCreador" Type="Categoria" />
+      <Association Name="Usuario_Competicion" Member="Competicions" ThisKey="login" OtherKey="usuarioModificador" Type="Competicion" />
+      <Association Name="Usuario_Competicion1" Member="Competicions1" ThisKey="login" OtherKey="usuarioCreador" Type="Competicion" />
+      <Association Name="Usuario_Contratacion" Member="Contratacions" ThisKey="login" OtherKey="usuarioModificador" Type="Contratacion" />
+      <Association Name="Usuario_Contratacion1" Member="Contratacions1" ThisKey="login" OtherKey="usuarioCreador" Type="Contratacion" />
+      <Association Name="Usuario_Direccion" Member="Direccions" ThisKey="login" OtherKey="usuarioCreador" Type="Direccion" />
+      <Association Name="Usuario_Direccion1" Member="Direccions1" ThisKey="login" OtherKey="usuarioModificador" Type="Direccion" />
+      <Association Name="Usuario_Entrenador" Member="Entrenadors" ThisKey="login" OtherKey="usuarioCreador" Type="Entrenador" />
+      <Association Name="Usuario_Entrenador1" Member="Entrenadors1" ThisKey="login" OtherKey="usuarioModificador" Type="Entrenador" />
+      <Association Name="Usuario_EntrenadorTitulo" Member="EntrenadorTitulos" ThisKey="login" OtherKey="usuarioModificador" Type="EntrenadorTitulo" />
+      <Association Name="Usuario_EntrenadorTitulo1" Member="EntrenadorTitulos1" ThisKey="login" OtherKey="usuarioCreador" Type="EntrenadorTitulo" />
+      <Association Name="Usuario_Equipo" Member="Equipos" ThisKey="login" OtherKey="usuarioCreador" Type="Equipo" />
+      <Association Name="Usuario_Equipo1" Member="Equipos1" ThisKey="login" OtherKey="usuarioModificador" Type="Equipo" />
+      <Association Name="Usuario_EquipoCompeticionTemporada" Member="EquipoCompeticionTemporadas" ThisKey="login" OtherKey="usuarioModificador" Type="EquipoCompeticionTemporada" />
+      <Association Name="Usuario_EquipoCompeticionTemporada1" Member="EquipoCompeticionTemporadas1" ThisKey="login" OtherKey="usuarioCreador" Type="EquipoCompeticionTemporada" />
+      <Association Name="Usuario_EquipoFederacion" Member="EquipoFederacions" ThisKey="login" OtherKey="usuarioCreador" Type="EquipoFederacion" />
+      <Association Name="Usuario_EquipoFederacion1" Member="EquipoFederacions1" ThisKey="login" OtherKey="usuarioModificador" Type="EquipoFederacion" />
+      <Association Name="Usuario_Especialidad" Member="Especialidads" ThisKey="login" OtherKey="usuarioCreador" Type="Especialidad" />
+      <Association Name="Usuario_Especialidad1" Member="Especialidads1" ThisKey="login" OtherKey="usuarioModificador" Type="Especialidad" />
+      <Association Name="Usuario_EspecialidadJugador" Member="EspecialidadJugadors" ThisKey="login" OtherKey="usuarioCreador" Type="EspecialidadJugador" />
+      <Association Name="Usuario_EspecialidadJugador1" Member="EspecialidadJugadors1" ThisKey="login" OtherKey="usuarioModificador" Type="EspecialidadJugador" />
+      <Association Name="Usuario_Fecha" Member="Fechas" ThisKey="login" OtherKey="usuarioCreador" Type="Fecha" />
+      <Association Name="Usuario_Fecha1" Member="Fechas1" ThisKey="login" OtherKey="usuarioModificador" Type="Fecha" />
+      <Association Name="Usuario_Federacion" Member="Federacions" ThisKey="login" OtherKey="usuarioCreador" Type="Federacion" />
+      <Association Name="Usuario_Federacion1" Member="Federacions1" ThisKey="login" OtherKey="usuarioModificador" Type="Federacion" />
+      <Association Name="Usuario_FuncionarioCorreo" Member="FuncionarioCorreos" ThisKey="login" OtherKey="usuarioCreador" Type="FuncionarioCorreo" />
+      <Association Name="Usuario_FuncionarioCorreo1" Member="FuncionarioCorreos1" ThisKey="login" OtherKey="usuarioModificador" Type="FuncionarioCorreo" />
+      <Association Name="Usuario_FuncionarioDeportivo" Member="FuncionarioDeportivos" ThisKey="login" OtherKey="usuarioCreador" Type="FuncionarioDeportivo" />
+      <Association Name="Usuario_FuncionarioDeportivo1" Member="FuncionarioDeportivos1" ThisKey="login" OtherKey="usuarioModificador" Type="FuncionarioDeportivo" />
+      <Association Name="Usuario_FuncionarioDireccion" Member="FuncionarioDireccions" ThisKey="login" OtherKey="usuarioCreador" Type="FuncionarioDireccion" />
+      <Association Name="Usuario_FuncionarioDireccion1" Member="FuncionarioDireccions1" ThisKey="login" OtherKey="usuarioModificador" Type="FuncionarioDireccion" />
+      <Association Name="Usuario_Jugador" Member="Jugadors" ThisKey="login" OtherKey="usuarioCreador" Type="Jugador" />
+      <Association Name="Usuario_Jugador1" Member="Jugadors1" ThisKey="login" OtherKey="usuarioModificador" Type="Jugador" />
+      <Association Name="Usuario_Oferta" Member="Ofertas" ThisKey="login" OtherKey="usuarioCreador" Type="Oferta" />
+      <Association Name="Usuario_Oferta1" Member="Ofertas1" ThisKey="login" OtherKey="usuarioModificador" Type="Oferta" />
+      <Association Name="Usuario_Partido" Member="Partidos" ThisKey="login" OtherKey="usuarioCreador" Type="Partido" />
+      <Association Name="Usuario_Partido1" Member="Partidos1" ThisKey="login" OtherKey="usuarioModificador" Type="Partido" />
+      <Association Name="Usuario_PartidoArbitro" Member="PartidoArbitros" ThisKey="login" OtherKey="usuarioModificador" Type="PartidoArbitro" />
+      <Association Name="Usuario_PartidoArbitro1" Member="PartidoArbitros1" ThisKey="login" OtherKey="usuarioCreador" Type="PartidoArbitro" />
+      <Association Name="Usuario_Persona" Member="Personas" ThisKey="login" OtherKey="usuarioCreador" Type="Persona" />
+      <Association Name="Usuario_Persona1" Member="Personas1" ThisKey="login" OtherKey="usuarioModificador" Type="Persona" />
+      <Association Name="Usuario_SocioEquipo" Member="SocioEquipos" ThisKey="login" OtherKey="usuarioCreador" Type="SocioEquipo" />
+      <Association Name="Usuario_SocioEquipo1" Member="SocioEquipos1" ThisKey="login" OtherKey="usuarioModificador" Type="SocioEquipo" />
+      <Association Name="Usuario_Temporada" Member="Temporadas" ThisKey="login" OtherKey="usuarioCreador" Type="Temporada" />
+      <Association Name="Usuario_Temporada1" Member="Temporadas1" ThisKey="login" OtherKey="usuarioModificador" Type="Temporada" />
+      <Association Name="Usuario_TipoCompeticion" Member="TipoCompeticions" ThisKey="login" OtherKey="usuarioCreador" Type="TipoCompeticion" />
+      <Association Name="Usuario_TipoCompeticion1" Member="TipoCompeticions1" ThisKey="login" OtherKey="usuarioModificador" Type="TipoCompeticion" />
+      <Association Name="Usuario_TituloAcademico" Member="TituloAcademicos" ThisKey="login" OtherKey="usuarioCreador" Type="TituloAcademico" />
+      <Association Name="Usuario_TituloAcademico1" Member="TituloAcademicos1" ThisKey="login" OtherKey="usuarioModificador" Type="TituloAcademico" />
+      <Association Name="Persona_Usuario" Member="Persona" ThisKey="codPersona" OtherKey="codPersona" Type="Persona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.AnotadorPartido" Member="AnotadorPartidos">
+    <Type Name="AnotadorPartido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="minuto" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="video" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Usuario_AnotadorPartido" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_AnotadorPartido1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Jugador_AnotadorPartido" Member="Jugador" ThisKey="codPersona" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+      <Association Name="Partido_AnotadorPartido" Member="Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Partido" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Arbitro" Member="Arbitros">
+    <Type Name="Arbitro">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codCategoria" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Arbitro_Hist_PartidoArbitro" Member="Hist_PartidoArbitros" ThisKey="codPersona" OtherKey="codPersona" Type="Hist_PartidoArbitro" />
+      <Association Name="Arbitro_PartidoArbitro" Member="PartidoArbitros" ThisKey="codPersona" OtherKey="codPersona" Type="PartidoArbitro" />
+      <Association Name="Usuario_Arbitro" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Arbitro1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Categoria_Arbitro" Member="Categoria" ThisKey="codCategoria" OtherKey="codCategoria" Type="Categoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.CambioPartido" Member="CambioPartidos">
+    <Type Name="CambioPartido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="jugadorSale" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="jugadorEntra" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
+      <Column Name="minuto" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Usuario_CambioPartido" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_CambioPartido1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Jugador_CambioPartido" Member="Jugador" ThisKey="jugadorSale" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+      <Association Name="Jugador_CambioPartido1" Member="Jugador1" ThisKey="jugadorEntra" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+      <Association Name="Partido_CambioPartido" Member="Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Partido" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Categoria" Member="Categorias">
+    <Type Name="Categoria">
+      <Column Name="codCategoria" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbrCategoria" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Categoria_Arbitro" Member="Arbitros" ThisKey="codCategoria" OtherKey="codCategoria" Type="Arbitro" />
+      <Association Name="Usuario_Categoria" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Categoria1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Competicion" Member="Competicions">
+    <Type Name="Competicion">
+      <Column Name="codCompeticion" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbrCompeticion" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="codTipoCompeticion" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Competicion_EquipoCompeticionTemporada" Member="EquipoCompeticionTemporadas" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="EquipoCompeticionTemporada" />
+      <Association Name="Competicion_Fecha" Member="Fechas" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="Fecha" />
+      <Association Name="Competicion_Hist_EquipoCompeticionTemporada" Member="Hist_EquipoCompeticionTemporadas" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="Hist_EquipoCompeticionTemporada" />
+      <Association Name="Competicion_Hist_Fecha" Member="Hist_Fechas" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="Hist_Fecha" />
+      <Association Name="Usuario_Competicion" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Competicion1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="TipoCompeticion_Competicion" Member="TipoCompeticion" ThisKey="codTipoCompeticion" OtherKey="codTipoCompeticion" Type="TipoCompeticion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Contratacion" Member="Contratacions">
+    <Type Name="Contratacion">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="importe" Type="System.Decimal" DbType="Decimal(12,0) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaContratacion" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fechaBaja" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Usuario_Contratacion" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Contratacion1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Equipo_Contratacion" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="FuncionarioDeportivo_Contratacion" Member="FuncionarioDeportivo" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDeportivo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Direccion" Member="Direccions">
+    <Type Name="Direccion">
+      <Column Name="codDireccion" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pais" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ciudad" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="detalle" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Direccion_FuncionarioDireccion" Member="FuncionarioDireccions" ThisKey="codDireccion" OtherKey="codDireccion" Type="FuncionarioDireccion" />
+      <Association Name="Usuario_Direccion" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Direccion1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Entrenador" Member="Entrenadors">
+    <Type Name="Entrenador">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="inicioCarrera" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Entrenador_EntrenadorTitulo" Member="EntrenadorTitulos" ThisKey="codPersona" OtherKey="codPersona" Type="EntrenadorTitulo" />
+      <Association Name="Usuario_Entrenador" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Entrenador1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="FuncionarioDeportivo_Entrenador" Member="FuncionarioDeportivo" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDeportivo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.EntrenadorTitulo" Member="EntrenadorTitulos">
+    <Type Name="EntrenadorTitulo">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codTitulo" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Entrenador_EntrenadorTitulo" Member="Entrenador" ThisKey="codPersona" OtherKey="codPersona" Type="Entrenador" IsForeignKey="true" />
+      <Association Name="Usuario_EntrenadorTitulo" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_EntrenadorTitulo1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="TituloAcademico_EntrenadorTitulo" Member="TituloAcademico" ThisKey="codTitulo" OtherKey="codTitulo" Type="TituloAcademico" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Equipo" Member="Equipos">
+    <Type Name="Equipo">
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreEquipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaFundacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Equipo_AlineacionPartido" Member="AlineacionPartidos" ThisKey="codEquipo" OtherKey="codEquipo" Type="AlineacionPartido" />
+      <Association Name="Equipo_Contratacion" Member="Contratacions" ThisKey="codEquipo" OtherKey="codEquipo" Type="Contratacion" />
+      <Association Name="Equipo_EquipoCompeticionTemporada" Member="EquipoCompeticionTemporadas" ThisKey="codEquipo" OtherKey="codEquipo" Type="EquipoCompeticionTemporada" />
+      <Association Name="Equipo_EquipoFederacion" Member="EquipoFederacions" ThisKey="codEquipo" OtherKey="codEquipo" Type="EquipoFederacion" />
+      <Association Name="Equipo_Hist_AlineacionPartido" Member="Hist_AlineacionPartidos" ThisKey="codEquipo" OtherKey="codEquipo" Type="Hist_AlineacionPartido" />
+      <Association Name="Equipo_Hist_EquipoCompeticionTemporada" Member="Hist_EquipoCompeticionTemporadas" ThisKey="codEquipo" OtherKey="codEquipo" Type="Hist_EquipoCompeticionTemporada" />
+      <Association Name="Equipo_Hist_Partido" Member="Hist_Partidos" ThisKey="codEquipo" OtherKey="codEquipo1" Type="Hist_Partido" />
+      <Association Name="Equipo_Hist_Partido1" Member="Hist_Partidos1" ThisKey="codEquipo" OtherKey="codEquipo2" Type="Hist_Partido" />
+      <Association Name="Equipo_Jugador" Member="Jugadors" ThisKey="codEquipo" OtherKey="codEquipo" Type="Jugador" />
+      <Association Name="Equipo_Oferta" Member="Ofertas" ThisKey="codEquipo" OtherKey="codEquipo" Type="Oferta" />
+      <Association Name="Equipo_Partido" Member="Partidos" ThisKey="codEquipo" OtherKey="codEquipo1" Type="Partido" />
+      <Association Name="Equipo_Partido1" Member="Partidos1" ThisKey="codEquipo" OtherKey="codEquipo2" Type="Partido" />
+      <Association Name="Equipo_SocioEquipo" Member="SocioEquipos" ThisKey="codEquipo" OtherKey="codEquipo" Type="SocioEquipo" />
+      <Association Name="Usuario_Equipo" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Equipo1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.EquipoCompeticionTemporada" Member="EquipoCompeticionTemporadas">
+    <Type Name="EquipoCompeticionTemporada">
+      <Column Name="codCompeticion" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codTemporada" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Competicion_EquipoCompeticionTemporada" Member="Competicion" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="Competicion" IsForeignKey="true" />
+      <Association Name="Equipo_EquipoCompeticionTemporada" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Usuario_EquipoCompeticionTemporada" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_EquipoCompeticionTemporada1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Temporada_EquipoCompeticionTemporada" Member="Temporada" ThisKey="codTemporada" OtherKey="codTemporada" Type="Temporada" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.EquipoFederacion" Member="EquipoFederacions">
+    <Type Name="EquipoFederacion">
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codFederacion" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Equipo_EquipoFederacion" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Usuario_EquipoFederacion" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_EquipoFederacion1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Federacion_EquipoFederacion" Member="Federacion" ThisKey="codFederacion" OtherKey="codFederacion" Type="Federacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Especialidad" Member="Especialidads">
+    <Type Name="Especialidad">
+      <Column Name="codEspecialidad" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbrEspecialidad" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Especialidad_EspecialidadJugador" Member="EspecialidadJugadors" ThisKey="codEspecialidad" OtherKey="codEspecialidad" Type="EspecialidadJugador" />
+      <Association Name="Usuario_Especialidad" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Especialidad1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.EspecialidadJugador" Member="EspecialidadJugadors">
+    <Type Name="EspecialidadJugador">
+      <Column Name="codEspecialidad" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gradoEspecialidad" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Especialidad_EspecialidadJugador" Member="Especialidad" ThisKey="codEspecialidad" OtherKey="codEspecialidad" Type="Especialidad" IsForeignKey="true" />
+      <Association Name="Usuario_EspecialidadJugador" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_EspecialidadJugador1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Jugador_EspecialidadJugador" Member="Jugador" ThisKey="codPersona" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Fecha" Member="Fechas">
+    <Type Name="Fecha">
+      <Column Name="codFecha" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codCompeticion" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Column Name="codTemporada" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Member="fecha1" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Fecha_Partido" Member="Partidos" ThisKey="codFecha" OtherKey="codFecha" Type="Partido" />
+      <Association Name="Competicion_Fecha" Member="Competicion" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="Competicion" IsForeignKey="true" />
+      <Association Name="Usuario_Fecha" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Fecha1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Temporada_Fecha" Member="Temporada" ThisKey="codTemporada" OtherKey="codTemporada" Type="Temporada" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Federacion" Member="Federacions">
+    <Type Name="Federacion">
+      <Column Name="codFederacion" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbrFederacion" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="fechaFundacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Federacion_EquipoFederacion" Member="EquipoFederacions" ThisKey="codFederacion" OtherKey="codFederacion" Type="EquipoFederacion" />
+      <Association Name="Usuario_Federacion" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Federacion1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.FuncionarioCorreo" Member="FuncionarioCorreos">
+    <Type Name="FuncionarioCorreo">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="correoElectronico" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Usuario_FuncionarioCorreo" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_FuncionarioCorreo1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="FuncionarioDeportivo_FuncionarioCorreo" Member="FuncionarioDeportivo" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDeportivo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.FuncionarioDeportivo" Member="FuncionarioDeportivos">
+    <Type Name="FuncionarioDeportivo">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fechaNacimiento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="telefonoFijo" Type="System.Decimal" DbType="Decimal(12,0) NOT NULL" CanBeNull="false" />
+      <Column Name="foto" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="telefonoCelular" Type="System.Decimal" DbType="Decimal(12,0) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="FuncionarioDeportivo_Contratacion" Member="Contratacions" ThisKey="codPersona" OtherKey="codPersona" Type="Contratacion" />
+      <Association Name="FuncionarioDeportivo_Entrenador" Member="Entrenador" ThisKey="codPersona" OtherKey="codPersona" Type="Entrenador" Cardinality="One" />
+      <Association Name="FuncionarioDeportivo_FuncionarioCorreo" Member="FuncionarioCorreos" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioCorreo" />
+      <Association Name="FuncionarioDeportivo_FuncionarioDireccion" Member="FuncionarioDireccions" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDireccion" />
+      <Association Name="FuncionarioDeportivo_Jugador" Member="Jugador" ThisKey="codPersona" OtherKey="codPersona" Type="Jugador" Cardinality="One" />
+      <Association Name="FuncionarioDeportivo_Oferta" Member="Ofertas" ThisKey="codPersona" OtherKey="codPersona" Type="Oferta" />
+      <Association Name="Usuario_FuncionarioDeportivo" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_FuncionarioDeportivo1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Persona_FuncionarioDeportivo" Member="Persona" ThisKey="codPersona" OtherKey="codPersona" Type="Persona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.FuncionarioDireccion" Member="FuncionarioDireccions">
+    <Type Name="FuncionarioDireccion">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codDireccion" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Usuario_FuncionarioDireccion" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_FuncionarioDireccion1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="FuncionarioDeportivo_FuncionarioDireccion" Member="FuncionarioDeportivo" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDeportivo" IsForeignKey="true" />
+      <Association Name="Direccion_FuncionarioDireccion" Member="Direccion" ThisKey="codDireccion" OtherKey="codDireccion" Type="Direccion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_AlineacionPartido" Member="Hist_AlineacionPartidos">
+    <Type Name="Hist_AlineacionPartido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Equipo_Hist_AlineacionPartido" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Hist_Partido_Hist_AlineacionPartido" Member="Hist_Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_Partido" IsForeignKey="true" />
+      <Association Name="Jugador_Hist_AlineacionPartido" Member="Jugador" ThisKey="codPersona" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_AnotadorPartido" Member="Hist_AnotadorPartidos">
+    <Type Name="Hist_AnotadorPartido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="minuto" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Column Name="video" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Hist_Partido_Hist_AnotadorPartido" Member="Hist_Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_Partido" IsForeignKey="true" />
+      <Association Name="Jugador_Hist_AnotadorPartido" Member="Jugador" ThisKey="codPersona" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_CambioPartido" Member="Hist_CambioPartidos">
+    <Type Name="Hist_CambioPartido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="jugadorSale" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="jugadorEntra" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
+      <Column Name="minuto" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Association Name="Hist_Partido_Hist_CambioPartido" Member="Hist_Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_Partido" IsForeignKey="true" />
+      <Association Name="Jugador_Hist_CambioPartido" Member="Jugador" ThisKey="jugadorSale" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+      <Association Name="Jugador_Hist_CambioPartido1" Member="Jugador1" ThisKey="jugadorEntra" OtherKey="codPersona" Type="Jugador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_EquipoCompeticionTemporada" Member="Hist_EquipoCompeticionTemporadas">
+    <Type Name="Hist_EquipoCompeticionTemporada">
+      <Column Name="codCompeticion" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codTemporada" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Equipo_Hist_EquipoCompeticionTemporada" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Competicion_Hist_EquipoCompeticionTemporada" Member="Competicion" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="Competicion" IsForeignKey="true" />
+      <Association Name="Hist_Temporada_Hist_EquipoCompeticionTemporada" Member="Hist_Temporada" ThisKey="codTemporada" OtherKey="codTemporada" Type="Hist_Temporada" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_Fecha" Member="Hist_Fechas">
+    <Type Name="Hist_Fecha">
+      <Column Name="codFecha" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codCompeticion" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Column Name="codTemporada" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Hist_Fecha_Hist_Partido" Member="Hist_Partidos" ThisKey="codFecha" OtherKey="codFecha" Type="Hist_Partido" />
+      <Association Name="Competicion_Hist_Fecha" Member="Competicion" ThisKey="codCompeticion" OtherKey="codCompeticion" Type="Competicion" IsForeignKey="true" />
+      <Association Name="Hist_Temporada_Hist_Fecha" Member="Hist_Temporada" ThisKey="codTemporada" OtherKey="codTemporada" Type="Hist_Temporada" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_Partido" Member="Hist_Partidos">
+    <Type Name="Hist_Partido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codFecha" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="codEquipo1" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="codEquipo2" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Association Name="Hist_Partido_Hist_AlineacionPartido" Member="Hist_AlineacionPartidos" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_AlineacionPartido" />
+      <Association Name="Hist_Partido_Hist_AnotadorPartido" Member="Hist_AnotadorPartidos" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_AnotadorPartido" />
+      <Association Name="Hist_Partido_Hist_CambioPartido" Member="Hist_CambioPartidos" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_CambioPartido" />
+      <Association Name="Hist_Partido_Hist_PartidoArbitro" Member="Hist_PartidoArbitros" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_PartidoArbitro" />
+      <Association Name="Hist_Fecha_Hist_Partido" Member="Hist_Fecha" ThisKey="codFecha" OtherKey="codFecha" Type="Hist_Fecha" IsForeignKey="true" />
+      <Association Name="Equipo_Hist_Partido" Member="Equipo" ThisKey="codEquipo1" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Equipo_Hist_Partido1" Member="Equipo1" ThisKey="codEquipo2" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_PartidoArbitro" Member="Hist_PartidoArbitros">
+    <Type Name="Hist_PartidoArbitro">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="estado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="calificacion" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Association Name="Hist_Partido_Hist_PartidoArbitro" Member="Hist_Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Hist_Partido" IsForeignKey="true" />
+      <Association Name="Arbitro_Hist_PartidoArbitro" Member="Arbitro" ThisKey="codPersona" OtherKey="codPersona" Type="Arbitro" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Hist_Temporada" Member="Hist_Temporadas">
+    <Type Name="Hist_Temporada">
+      <Column Name="codTemporada" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Hist_Temporada_Hist_EquipoCompeticionTemporada" Member="Hist_EquipoCompeticionTemporadas" ThisKey="codTemporada" OtherKey="codTemporada" Type="Hist_EquipoCompeticionTemporada" />
+      <Association Name="Hist_Temporada_Hist_Fecha" Member="Hist_Fechas" ThisKey="codTemporada" OtherKey="codTemporada" Type="Hist_Fecha" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Jugador" Member="Jugadors">
+    <Type Name="Jugador">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pesoJugador" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="alturaJugador" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Jugador_AlineacionPartido" Member="AlineacionPartidos" ThisKey="codPersona" OtherKey="codPersona" Type="AlineacionPartido" />
+      <Association Name="Jugador_AnotadorPartido" Member="AnotadorPartidos" ThisKey="codPersona" OtherKey="codPersona" Type="AnotadorPartido" />
+      <Association Name="Jugador_CambioPartido" Member="CambioPartidos" ThisKey="codPersona" OtherKey="jugadorSale" Type="CambioPartido" />
+      <Association Name="Jugador_CambioPartido1" Member="CambioPartidos1" ThisKey="codPersona" OtherKey="jugadorEntra" Type="CambioPartido" />
+      <Association Name="Jugador_EspecialidadJugador" Member="EspecialidadJugadors" ThisKey="codPersona" OtherKey="codPersona" Type="EspecialidadJugador" />
+      <Association Name="Jugador_Hist_AlineacionPartido" Member="Hist_AlineacionPartidos" ThisKey="codPersona" OtherKey="codPersona" Type="Hist_AlineacionPartido" />
+      <Association Name="Jugador_Hist_AnotadorPartido" Member="Hist_AnotadorPartidos" ThisKey="codPersona" OtherKey="codPersona" Type="Hist_AnotadorPartido" />
+      <Association Name="Jugador_Hist_CambioPartido" Member="Hist_CambioPartidos" ThisKey="codPersona" OtherKey="jugadorSale" Type="Hist_CambioPartido" />
+      <Association Name="Jugador_Hist_CambioPartido1" Member="Hist_CambioPartidos1" ThisKey="codPersona" OtherKey="jugadorEntra" Type="Hist_CambioPartido" />
+      <Association Name="Equipo_Jugador" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="FuncionarioDeportivo_Jugador" Member="FuncionarioDeportivo" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDeportivo" IsForeignKey="true" />
+      <Association Name="Usuario_Jugador" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Jugador1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Oferta" Member="Ofertas">
+    <Type Name="Oferta">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="importe" Type="System.Decimal" DbType="Decimal(12,0) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Equipo_Oferta" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="FuncionarioDeportivo_Oferta" Member="FuncionarioDeportivo" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDeportivo" IsForeignKey="true" />
+      <Association Name="Usuario_Oferta" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Oferta1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Partido" Member="Partidos">
+    <Type Name="Partido">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codFecha" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="codEquipo1" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="codEquipo2" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Partido_AlineacionPartido" Member="AlineacionPartidos" ThisKey="codPartido" OtherKey="codPartido" Type="AlineacionPartido" />
+      <Association Name="Partido_AnotadorPartido" Member="AnotadorPartidos" ThisKey="codPartido" OtherKey="codPartido" Type="AnotadorPartido" />
+      <Association Name="Partido_CambioPartido" Member="CambioPartidos" ThisKey="codPartido" OtherKey="codPartido" Type="CambioPartido" />
+      <Association Name="Partido_PartidoArbitro" Member="PartidoArbitros" ThisKey="codPartido" OtherKey="codPartido" Type="PartidoArbitro" />
+      <Association Name="Fecha_Partido" Member="Fecha" ThisKey="codFecha" OtherKey="codFecha" Type="Fecha" IsForeignKey="true" />
+      <Association Name="Usuario_Partido" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Equipo_Partido" Member="Equipo" ThisKey="codEquipo1" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Equipo_Partido1" Member="Equipo1" ThisKey="codEquipo2" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Usuario_Partido1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.PartidoArbitro" Member="PartidoArbitros">
+    <Type Name="PartidoArbitro">
+      <Column Name="codPartido" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="estado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="calificacion" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Arbitro_PartidoArbitro" Member="Arbitro" ThisKey="codPersona" OtherKey="codPersona" Type="Arbitro" IsForeignKey="true" />
+      <Association Name="Partido_PartidoArbitro" Member="Partido" ThisKey="codPartido" OtherKey="codPartido" Type="Partido" IsForeignKey="true" />
+      <Association Name="Usuario_PartidoArbitro" Member="Usuario" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_PartidoArbitro1" Member="Usuario1" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Persona" Member="Personas">
+    <Type Name="Persona">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbrPersona" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Persona_Usuario" Member="Usuarios" ThisKey="codPersona" OtherKey="codPersona" Type="Usuario" />
+      <Association Name="Persona_FuncionarioDeportivo" Member="FuncionarioDeportivo" ThisKey="codPersona" OtherKey="codPersona" Type="FuncionarioDeportivo" Cardinality="One" />
+      <Association Name="Persona_SocioEquipo" Member="SocioEquipos" ThisKey="codPersona" OtherKey="codPersona" Type="SocioEquipo" />
+      <Association Name="Usuario_Persona" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Persona1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.SocioEquipo" Member="SocioEquipos">
+    <Type Name="SocioEquipo">
+      <Column Name="codPersona" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codEquipo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Equipo_SocioEquipo" Member="Equipo" ThisKey="codEquipo" OtherKey="codEquipo" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Persona_SocioEquipo" Member="Persona" ThisKey="codPersona" OtherKey="codPersona" Type="Persona" IsForeignKey="true" />
+      <Association Name="Usuario_SocioEquipo" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_SocioEquipo1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.Temporada" Member="Temporadas">
+    <Type Name="Temporada">
+      <Column Name="codTemporada" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Temporada_EquipoCompeticionTemporada" Member="EquipoCompeticionTemporadas" ThisKey="codTemporada" OtherKey="codTemporada" Type="EquipoCompeticionTemporada" />
+      <Association Name="Temporada_Fecha" Member="Fechas" ThisKey="codTemporada" OtherKey="codTemporada" Type="Fecha" />
+      <Association Name="Usuario_Temporada" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Temporada1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.TipoCompeticion" Member="TipoCompeticions">
+    <Type Name="TipoCompeticion">
+      <Column Name="codTipoCompeticion" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbrTipoCompeticion" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="TipoCompeticion_Competicion" Member="Competicions" ThisKey="codTipoCompeticion" OtherKey="codTipoCompeticion" Type="Competicion" />
+      <Association Name="Usuario_TipoCompeticion" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_TipoCompeticion1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Caso3Schema.TituloAcademico" Member="TituloAcademicos">
+    <Type Name="TituloAcademico">
+      <Column Name="codTitulo" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreTitulo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="almaMater" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioCreador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioModificador" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaCreacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="TituloAcademico_EntrenadorTitulo" Member="EntrenadorTitulos" ThisKey="codTitulo" OtherKey="codTitulo" Type="EntrenadorTitulo" />
+      <Association Name="Usuario_TituloAcademico" Member="Usuario" ThisKey="usuarioCreador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_TituloAcademico1" Member="Usuario1" ThisKey="usuarioModificador" OtherKey="login" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
