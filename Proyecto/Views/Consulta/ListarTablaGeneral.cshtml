@@ -4,7 +4,7 @@
     ViewBag.Title = "Tabla General";
 }
 
-<h2>Goleadores entre encuentros</h2>
+<h2>Tabla General</h2>
 
 <table class="table">
     <tr>
@@ -37,30 +37,30 @@
     @foreach (var item in Model)
     {
         <tr>
-            <th>
+            <td>
                 @Html.DisplayFor(modelitem => item.nbrEquipo)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelitem => item.pjugados)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelitem => item.pganados)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelitem => item.pperdidos)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelitem => item.pempatados)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelitem => item.gfavor)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelitem => item.gcontra)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelitem => item.ptotales)
-            </th>
+            </td>
         </tr>
     }
 </table>

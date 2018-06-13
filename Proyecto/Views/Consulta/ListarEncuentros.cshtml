@@ -31,19 +31,19 @@
     @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Equipo_1) <!-- Pasar de decimal a int -->
+                @($"{item.Equipo_1:N0}") 
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Equipo_2) <!-- Pasar de decimal a int -->
+                @($"{item.Equipo_2:N0}") 
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Fecha)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Goles_del_equipo_1) <!-- Pasar de decimal a int -->
+                @($"{item.Goles_del_equipo_1:N0}") 
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Goles_del_equipo_2) <!-- Pasar de decimal a int -->
+                @($"{item.Goles_del_equipo_2:N0}") 
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nombre_de_la_competicion)

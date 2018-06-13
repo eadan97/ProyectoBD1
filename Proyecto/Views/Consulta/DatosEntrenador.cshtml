@@ -1,9 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "Arbitros en torneo";
+    ViewBag.Title = "Datos del Entrenador";
 }
 
-<h2>Arbitros en torneo</h2>
+<h2>Datos del Entrenador</h2>
 
 
 @using (Html.BeginForm())
@@ -11,11 +11,13 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Torneo</h4>
+
+        <h4>Digitar datos a consultar</h4>
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <label class="control-label col-md-2">Codigo del torneo</label>
+            <label class="control-label col-md-2">Codigo del Entrenador</label>
             <div class="col-md-10">
                 <input id="codPersona" name="codPersona" type="number" class="form-control" />
             </div>

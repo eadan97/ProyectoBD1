@@ -3,37 +3,39 @@
     ViewBag.Title = "Tabla general";
 }
 
-<h2>Goleadores entre dos equipos</h2>
+<h2>Tabla General</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <h4>Torneo</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        <label class="control-label col-md-2">Codigo del equipo 1</label>
-        <div class="col-md-10">
-            <input id="codCompetencia" name="codCompetencia" type="number" class="form-control" />
+    <div class="form-horizontal">
+        
+        <h4>Digitar datos a consultar</h4>
+
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+        <div class="form-group">
+            <label class="control-label col-md-2">Codigo del equipo 1</label>
+            <div class="col-md-10">
+                <input id="codCompetencia" name="codCompetencia" type="number" class="form-control"/>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-md-2">Codigo del equipo 2</label>
-        <div class="col-md-10">
-            <input id="codTemporada" name="codTemporada" type="number" class="form-control" />
+        <div class="form-group">
+            <label class="control-label col-md-2">Codigo del equipo 2</label>
+            <div class="col-md-10">
+                <input id="codTemporada" name="codTemporada" type="number" class="form-control"/>
+            </div>
         </div>
-    </div>
 
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Consultar" class="btn btn-default" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Consultar" class="btn btn-default"/>
+            </div>
         </div>
     </div>
-</div>
 }
 
 @section Scripts {
