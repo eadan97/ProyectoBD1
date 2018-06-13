@@ -11,19 +11,21 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Torneo</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        <h4>Digitar datos a consultar</h4>
+
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
         <div class="form-group">
             <label class="control-label col-md-2">Codigo del torneo</label>
             <div class="col-md-10">
-                <input id="codTorneo" name="codTorneo" type="number" class="form-control" />
+                <input id="codTorneo" name="codTorneo" type="number" class="form-control"/>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Consultar" class="btn btn-default" />
+                <input type="submit" value="Consultar" class="btn btn-default"/>
             </div>
         </div>
     </div>

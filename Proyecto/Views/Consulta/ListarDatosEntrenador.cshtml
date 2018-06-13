@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Proyecto.Models.DatosEntrenador_Result>
 
 @{
-    ViewBag.Title = "Arbitros en torneo";
+    ViewBag.Title = "Datos del Entrenador";
 }
 
-<h2>Arbitros en torneo</h2>
+<h2>Datos del Entrenador</h2>
 
 <table class="table">
     <tr>
@@ -46,7 +46,7 @@
             @Html.DisplayFor(modelItem => item.Tipo_competicion)
         </td>
         <td>
-            @($"{item.Posicion:N0}")
+            @Html.DisplayFor(modelItem => item.Posicion)
         </td>
     </tr>
     }
