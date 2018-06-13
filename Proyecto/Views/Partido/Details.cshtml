@@ -1,0 +1,90 @@
+﻿@model Proyecto.Models.Partido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Partido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.golesEquipo1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.golesEquipo1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.golesEquipo2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.golesEquipo2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipo.nombreEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo.nombreEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipo1.nombreEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo1.nombreEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha.usuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha.usuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.login)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codPartido }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

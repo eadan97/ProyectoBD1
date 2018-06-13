@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Proyecto.Models.Torneo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaModificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Competicion.nbrCompeticion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Temporada.usuarioCreador)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioModificador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaModificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competicion.nbrCompeticion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Temporada.usuarioCreador)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codTorneo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codTorneo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codTorneo })
+        </td>
+    </tr>
+}
+
+</table>

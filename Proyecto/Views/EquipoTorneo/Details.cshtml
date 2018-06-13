@@ -1,0 +1,74 @@
+﻿@model Proyecto.Models.EquipoTorneo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EquipoTorneo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.posicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.posicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipo.nombreEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo.nombreEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Torneo.usuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Torneo.usuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.login)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
