@@ -23,13 +23,13 @@ namespace Proyecto.Controllers
         }
 
         // GET: AnotadorPartido/Details/5
-        public async Task<ActionResult> Details(decimal id)
+        public async Task<ActionResult> Details(decimal codPartido, decimal codPersona, decimal minuto)
         {
-            if (id == null)
+            if (codPersona == null || codPartido==null||minuto==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(id);
+            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(codPartido,codPersona,minuto);
             if (anotadorPartido == null)
             {
                 return HttpNotFound();
@@ -40,8 +40,8 @@ namespace Proyecto.Controllers
         // GET: AnotadorPartido/Create
         public ActionResult Create()
         {
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador");
-            ViewBag.codPersona = new SelectList(db.Jugador, "codPersona", "usuarioCreador");
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido");
+            ViewBag.codPersona = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona");
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login");
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login");
             return View();
@@ -61,27 +61,27 @@ namespace Proyecto.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador", anotadorPartido.codPartido);
-            ViewBag.codPersona = new SelectList(db.Jugador, "codPersona", "usuarioCreador", anotadorPartido.codPersona);
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido", anotadorPartido.codPartido);
+            ViewBag.codPersona = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", anotadorPartido.codPersona);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", anotadorPartido.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", anotadorPartido.usuarioModificador);
             return View(anotadorPartido);
         }
 
         // GET: AnotadorPartido/Edit/5
-        public async Task<ActionResult> Edit(decimal id)
+        public async Task<ActionResult> Edit(decimal codPartido, decimal codPersona, decimal minuto)
         {
-            if (id == null)
+            if (codPersona == null || codPartido == null || minuto == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(id);
+            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(codPartido, codPersona, minuto);
             if (anotadorPartido == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador", anotadorPartido.codPartido);
-            ViewBag.codPersona = new SelectList(db.Jugador, "codPersona", "usuarioCreador", anotadorPartido.codPersona);
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido", anotadorPartido.codPartido);
+            ViewBag.codPersona = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", anotadorPartido.codPersona);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", anotadorPartido.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", anotadorPartido.usuarioModificador);
             return View(anotadorPartido);
@@ -100,21 +100,21 @@ namespace Proyecto.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador", anotadorPartido.codPartido);
-            ViewBag.codPersona = new SelectList(db.Jugador, "codPersona", "usuarioCreador", anotadorPartido.codPersona);
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido", anotadorPartido.codPartido);
+            ViewBag.codPersona = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", anotadorPartido.codPersona);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", anotadorPartido.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", anotadorPartido.usuarioModificador);
             return View(anotadorPartido);
         }
 
         // GET: AnotadorPartido/Delete/5
-        public async Task<ActionResult> Delete(decimal id)
+        public async Task<ActionResult> Delete(decimal codPartido, decimal codPersona, decimal minuto)
         {
-            if (id == null)
+            if (codPersona == null || codPartido == null || minuto == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(id);
+            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(codPartido, codPersona, minuto);
             if (anotadorPartido == null)
             {
                 return HttpNotFound();
@@ -125,9 +125,9 @@ namespace Proyecto.Controllers
         // POST: AnotadorPartido/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(decimal id)
+        public async Task<ActionResult> DeleteConfirmed(decimal codPartido, decimal codPersona, decimal minuto)
         {
-            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(id);
+            AnotadorPartido anotadorPartido = await db.AnotadorPartido.FindAsync(codPartido, codPersona, minuto);
             db.AnotadorPartido.Remove(anotadorPartido);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

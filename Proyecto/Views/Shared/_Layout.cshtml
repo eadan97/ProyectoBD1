@@ -21,7 +21,39 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <!--li>@Html.ActionLink("Home", "Index", "Home")</!--li-->
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Consultas
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Tabla General", "TablaGeneral", "Consulta")</li>
+                            <li>@Html.ActionLink("Datos de entrenador", "DatosEntrenador", "Consulta")</li>
+                            <li>@Html.ActionLink("Datos de jugador", "DatosJugador", "Consulta")</li>
+                            <li>@Html.ActionLink("Encuentros", "Encuentros", "Consulta")</li>
+                            <li>@Html.ActionLink("Arbitros en torneo", "ArbitrosTorneo", "Consulta")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Mantenimiento
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Partido", "Index", "Partido")</li>
+                            <li>@Html.ActionLink("Temporada", "Index", "Temporada")</li>
+                            <li>@Html.ActionLink("Torneo", "Index", "Torneo")</li>
+                            <li>@Html.ActionLink("Fecha", "Index", "Fecha")</li>
+                            <li>@Html.ActionLink("Equipos en torneo", "Index", "EquipoTorneo")</li>
+                            <li>@Html.ActionLink("Fecha", "Index", "Fecha")</li>
+                            <li>@Html.ActionLink("Competicion", "Index", "Competicion")</li>
+                            <li>@Html.ActionLink("Cambios en partido", "Index", "CambioPartido")</li>
+                            <li>@Html.ActionLink("Anotadores en partido", "Index", "AnotadorPartido")</li>
+                            <li>@Html.ActionLink("Alineacion por partido", "Index", "AlineacionPartido")</li>
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -33,7 +65,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Chaves&Esquivel</p>
         </footer>
     </div>
 

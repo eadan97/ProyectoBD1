@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
@@ -27,14 +29,21 @@ namespace Proyecto.Models
             this.Hist_CambioPartido = new HashSet<Hist_CambioPartido>();
             this.Hist_CambioPartido1 = new HashSet<Hist_CambioPartido>();
         }
-    
+        [DisplayName("Codigo de persona")]
         public decimal codPersona { get; set; }
+        [DisplayName("Peso del jugador")]
         public decimal pesoJugador { get; set; }
+        [DisplayName("Altura del jugador")]
         public decimal alturaJugador { get; set; }
+        [DisplayName("Codigo del equipo")]
         public decimal codEquipo { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

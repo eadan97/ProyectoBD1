@@ -1,21 +1,56 @@
 ﻿@model Proyecto.Models.EquipoTorneo
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
     <h4>EquipoTorneo</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipo.nombreEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo.nombreEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codTorneo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codTorneo)
+        </dd>
+
+
         <dt>
             @Html.DisplayNameFor(model => model.posicion)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.posicion)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuarioModificador)
         </dd>
 
         <dt>
@@ -34,41 +69,9 @@
             @Html.DisplayFor(model => model.fechaModificacion)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Equipo.nombreEquipo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Equipo.nombreEquipo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Torneo.usuarioCreador)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Torneo.usuarioCreador)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario.login)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario.login)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario1.login)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { equipo = Model.codEquipo, torneo = Model.codTorneo }) |
+    @Html.ActionLink("Ir a la lista", "Index")
 </p>

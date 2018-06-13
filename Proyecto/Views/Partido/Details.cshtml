@@ -1,45 +1,21 @@
 ﻿@model Proyecto.Models.Partido
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
     <h4>Partido</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.golesEquipo1)
+            @Html.DisplayNameFor(model => model.Fecha.codFecha)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.golesEquipo1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.golesEquipo2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.golesEquipo2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.fechaCreacion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.fechaCreacion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.fechaModificacion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.fechaModificacion)
+            @Html.DisplayFor(model => model.Fecha.codFecha)
         </dd>
 
         <dt>
@@ -58,33 +34,59 @@
             @Html.DisplayFor(model => model.Equipo1.nombreEquipo)
         </dd>
 
+
         <dt>
-            @Html.DisplayNameFor(model => model.Fecha.usuarioCreador)
+            @Html.DisplayNameFor(model => model.golesEquipo1)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Fecha.usuarioCreador)
+            @Html.DisplayFor(model => model.golesEquipo1)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario.login)
+            @Html.DisplayNameFor(model => model.golesEquipo2)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Usuario.login)
+            @Html.DisplayFor(model => model.golesEquipo2)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuarioCreador)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
+            @Html.DisplayNameFor(model => model.usuarioModificador)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Usuario1.login)
+            @Html.DisplayFor(model => model.usuarioModificador)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificacion)
+        </dd>
+
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.codPartido }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.codPartido }) |
+    @Html.ActionLink("Ir a la lista", "Index")
 </p>

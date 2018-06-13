@@ -1,18 +1,27 @@
 ﻿@model IEnumerable<Proyecto.Models.Fecha>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Fecha";
 }
 
-<h2>Index</h2>
+<h2>Fecha</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.codTorneo)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.fecha1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.fechaCreacion)
@@ -20,22 +29,22 @@
         <th>
             @Html.DisplayNameFor(model => model.fechaModificacion)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Torneo.usuarioCreador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario.login)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
-        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.codTorneo)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.fecha1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioModificador)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.fechaCreacion)
@@ -44,18 +53,9 @@
             @Html.DisplayFor(modelItem => item.fechaModificacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Torneo.usuarioCreador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario.login)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario1.login)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.codFecha }) |
-            @Html.ActionLink("Details", "Details", new { id=item.codFecha }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.codFecha })
+            @Html.ActionLink("Editar", "Edit", new {id = item.codFecha}) |
+            @Html.ActionLink("Detalles", "Details", new {id = item.codFecha}) |
+            @Html.ActionLink("Eliminar", "Delete", new {id = item.codFecha})
         </td>
     </tr>
 }

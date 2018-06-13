@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
@@ -20,12 +22,18 @@ namespace Proyecto.Models
             this.SocioEquipo = new HashSet<SocioEquipo>();
             this.Usuario2 = new HashSet<Usuario>();
         }
-    
+
+        [DisplayName("Codigo de persona")]
         public decimal codPersona { get; set; }
+        [DisplayName("Nombre de persona")]
         public string nbrPersona { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario nodificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
     
         public virtual FuncionarioDeportivo FuncionarioDeportivo { get; set; }

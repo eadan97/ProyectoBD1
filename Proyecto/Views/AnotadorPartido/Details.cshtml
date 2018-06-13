@@ -1,21 +1,63 @@
 ﻿@model Proyecto.Models.AnotadorPartido
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
     <h4>AnotadorPartido</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.Partido.codPartido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Partido.codPartido)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Jugador.FuncionarioDeportivo.Persona.nbrPersona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jugador.FuncionarioDeportivo.Persona.nbrPersona)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.minuto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.minuto)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.video)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.video)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuarioModificador)
         </dd>
 
         <dt>
@@ -34,41 +76,9 @@
             @Html.DisplayFor(model => model.fechaModificacion)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Partido.usuarioCreador)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Partido.usuarioCreador)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Jugador.usuarioCreador)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Jugador.usuarioCreador)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario.login)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario.login)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario1.login)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { Model.codPartido, Model.codPersona, Model.minuto }) |
+    @Html.ActionLink("Ir a la lista", "Index")
 </p>

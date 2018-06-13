@@ -1,33 +1,36 @@
 ﻿@model IEnumerable<Proyecto.Models.Competicion>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Competicion";
 }
 
-<h2>Index</h2>
+<h2>
+    Competicion
+</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.nbrCompeticion)
         </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.TipoCompeticion.nbrTipoCompeticion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.fechaCreacion)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.fechaModificacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TipoCompeticion.nbrTipoCompeticion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario.login)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
         </th>
         <th></th>
     </tr>
@@ -38,24 +41,24 @@
             @Html.DisplayFor(modelItem => item.nbrCompeticion)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.TipoCompeticion.nbrTipoCompeticion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioModificador)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.fechaCreacion)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.fechaModificacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TipoCompeticion.nbrTipoCompeticion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario.login)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario1.login)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.codCompeticion }) |
-            @Html.ActionLink("Details", "Details", new { id=item.codCompeticion }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.codCompeticion })
+            @Html.ActionLink("Editar", "Edit", new { id=item.codCompeticion }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.codCompeticion }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.codCompeticion })
         </td>
     </tr>
 }

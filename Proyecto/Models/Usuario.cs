@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
@@ -74,8 +76,10 @@ namespace Proyecto.Models
             this.TituloAcademico = new HashSet<TituloAcademico>();
             this.TituloAcademico1 = new HashSet<TituloAcademico>();
         }
-    
+
+        [DisplayName("Nombre de usuario")]
         public string login { get; set; }
+        [DisplayName("Codigo de la persona")]
         public Nullable<decimal> codPersona { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

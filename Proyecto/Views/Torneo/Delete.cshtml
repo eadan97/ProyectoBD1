@@ -1,18 +1,33 @@
 ﻿@model Proyecto.Models.Torneo
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar";
 }
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Está seguro que desea eliminar esto?</h3>
 <div>
     <h4>Torneo</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.usuarioCreador)
+            @Html.DisplayNameFor(model => model.Competicion.nbrCompeticion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Competicion.nbrCompeticion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codTemporada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codTemporada)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioCreador))
         </dt>
 
         <dd>
@@ -43,30 +58,14 @@
             @Html.DisplayFor(model => model.fechaModificacion)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Competicion.nbrCompeticion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Competicion.nbrCompeticion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Temporada.usuarioCreador)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Temporada.usuarioCreador)
-        </dd>
-
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Ir a la lista", "Index")
         </div>
     }
 </div>

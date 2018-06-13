@@ -198,10 +198,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlineacionPartidoController.cs" />
+    <Compile Include="Controllers\AnotadorPartidoController.cs" />
+    <Compile Include="Controllers\CambioPartidoController.cs" />
+    <Compile Include="Controllers\CompeticionController.cs" />
     <Compile Include="Controllers\ConsultaController.cs" />
+    <Compile Include="Controllers\EquipoTorneoController.cs" />
+    <Compile Include="Controllers\FechaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\PartidoController.cs" />
+    <Compile Include="Controllers\TemporadaController.cs" />
+    <Compile Include="Controllers\TorneoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,10 +232,10 @@
     <Compile Include="Models\Categoria.cs">
       <DependentUpon>dbProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ConsultaViewModel.cs" />
     <Compile Include="Models\Competicion.cs">
       <DependentUpon>dbProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConsultaViewModel.cs" />
     <Compile Include="Models\Contratacion.cs">
       <DependentUpon>dbProyecto.tt</DependentUpon>
     </Compile>
@@ -435,11 +443,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Usuario\Create.cshtml" />
-    <Content Include="Views\Usuario\Delete.cshtml" />
-    <Content Include="Views\Usuario\Details.cshtml" />
-    <Content Include="Views\Usuario\Edit.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Consulta\ArbitrosTorneo.cshtml" />
     <Content Include="Views\Consulta\ListarArbitrosTorneo.cshtml" />
     <Content Include="Views\Consulta\Goleadores.cshtml" />
@@ -452,6 +455,51 @@
     <Content Include="Views\Consulta\ListarDatosJugador.cshtml" />
     <Content Include="Views\Consulta\TablaGeneral.cshtml" />
     <Content Include="Views\Consulta\ListarTablaGeneral.cshtml" />
+    <Content Include="Views\AlineacionPartido\Create.cshtml" />
+    <Content Include="Views\AlineacionPartido\Delete.cshtml" />
+    <Content Include="Views\AlineacionPartido\Details.cshtml" />
+    <Content Include="Views\AlineacionPartido\Edit.cshtml" />
+    <Content Include="Views\AlineacionPartido\Index.cshtml" />
+    <Content Include="Views\AnotadorPartido\Create.cshtml" />
+    <Content Include="Views\AnotadorPartido\Delete.cshtml" />
+    <Content Include="Views\AnotadorPartido\Details.cshtml" />
+    <Content Include="Views\AnotadorPartido\Edit.cshtml" />
+    <Content Include="Views\AnotadorPartido\Index.cshtml" />
+    <Content Include="Views\CambioPartido\Create.cshtml" />
+    <Content Include="Views\CambioPartido\Delete.cshtml" />
+    <Content Include="Views\CambioPartido\Details.cshtml" />
+    <Content Include="Views\CambioPartido\Edit.cshtml" />
+    <Content Include="Views\CambioPartido\Index.cshtml" />
+    <Content Include="Views\Competicion\Create.cshtml" />
+    <Content Include="Views\Competicion\Delete.cshtml" />
+    <Content Include="Views\Competicion\Details.cshtml" />
+    <Content Include="Views\Competicion\Edit.cshtml" />
+    <Content Include="Views\Competicion\Index.cshtml" />
+    <Content Include="Views\EquipoTorneo\Create.cshtml" />
+    <Content Include="Views\EquipoTorneo\Delete.cshtml" />
+    <Content Include="Views\EquipoTorneo\Details.cshtml" />
+    <Content Include="Views\EquipoTorneo\Edit.cshtml" />
+    <Content Include="Views\EquipoTorneo\Index.cshtml" />
+    <Content Include="Views\Fecha\Create.cshtml" />
+    <Content Include="Views\Fecha\Delete.cshtml" />
+    <Content Include="Views\Fecha\Details.cshtml" />
+    <Content Include="Views\Fecha\Edit.cshtml" />
+    <Content Include="Views\Fecha\Index.cshtml" />
+    <Content Include="Views\Partido\Create.cshtml" />
+    <Content Include="Views\Partido\Delete.cshtml" />
+    <Content Include="Views\Partido\Details.cshtml" />
+    <Content Include="Views\Partido\Edit.cshtml" />
+    <Content Include="Views\Partido\Index.cshtml" />
+    <Content Include="Views\Temporada\Create.cshtml" />
+    <Content Include="Views\Temporada\Delete.cshtml" />
+    <Content Include="Views\Temporada\Details.cshtml" />
+    <Content Include="Views\Temporada\Edit.cshtml" />
+    <Content Include="Views\Temporada\Index.cshtml" />
+    <Content Include="Views\Torneo\Create.cshtml" />
+    <Content Include="Views\Torneo\Delete.cshtml" />
+    <Content Include="Views\Torneo\Details.cshtml" />
+    <Content Include="Views\Torneo\Edit.cshtml" />
+    <Content Include="Views\Torneo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

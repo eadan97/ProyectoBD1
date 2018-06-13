@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Proyecto.Models.Temporada>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Temporada";
 }
 
-<h2>Index</h2>
+<h2>Temporada</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -18,16 +18,16 @@
             @Html.DisplayNameFor(model => model.fechaFin)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.usuarioCreador))
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.fechaCreacion)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.fechaModificacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario.login)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
         </th>
         <th></th>
     </tr>
@@ -41,21 +41,22 @@
             @Html.DisplayFor(modelItem => item.fechaFin)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.usuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioModificador)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.fechaCreacion)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.fechaModificacion)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.Usuario.login)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario1.login)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.codTemporada }) |
-            @Html.ActionLink("Details", "Details", new { id=item.codTemporada }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.codTemporada })
+            @Html.ActionLink("Editar", "Edit", new { id=item.codTemporada }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.codTemporada }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.codTemporada })
         </td>
     </tr>
 }

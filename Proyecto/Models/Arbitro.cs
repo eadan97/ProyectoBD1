@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace Proyecto.Models
 {
     using System;
@@ -20,12 +23,18 @@ namespace Proyecto.Models
             this.Hist_PartidoArbitro = new HashSet<Hist_PartidoArbitro>();
             this.PartidoArbitro = new HashSet<PartidoArbitro>();
         }
-    
+        [Key]
+        [DisplayName("Codigo del arbitro")]
         public decimal codPersona { get; set; }
+        [DisplayName("Codigo de la catergoria")]
         public decimal codCategoria { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
     
         public virtual Categoria Categoria { get; set; }

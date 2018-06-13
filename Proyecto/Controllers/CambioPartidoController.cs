@@ -23,13 +23,13 @@ namespace Proyecto.Controllers
         }
 
         // GET: CambioPartido/Details/5
-        public async Task<ActionResult> Details(decimal id)
+        public async Task<ActionResult> Details(decimal codPartido, decimal codPersona)
         {
-            if (id == null)
+            if (codPartido == null || codPersona==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(id);
+            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(codPartido,codPersona);
             if (cambioPartido == null)
             {
                 return HttpNotFound();
@@ -40,9 +40,9 @@ namespace Proyecto.Controllers
         // GET: CambioPartido/Create
         public ActionResult Create()
         {
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador");
-            ViewBag.jugadorSale = new SelectList(db.Jugador, "codPersona", "usuarioCreador");
-            ViewBag.jugadorEntra = new SelectList(db.Jugador, "codPersona", "usuarioCreador");
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido");
+            ViewBag.jugadorSale = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona");
+            ViewBag.jugadorEntra = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona");
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login");
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login");
             return View();
@@ -62,29 +62,29 @@ namespace Proyecto.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador", cambioPartido.codPartido);
-            ViewBag.jugadorSale = new SelectList(db.Jugador, "codPersona", "usuarioCreador", cambioPartido.jugadorSale);
-            ViewBag.jugadorEntra = new SelectList(db.Jugador, "codPersona", "usuarioCreador", cambioPartido.jugadorEntra);
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido", cambioPartido.codPartido);
+            ViewBag.jugadorSale = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", cambioPartido.jugadorSale);
+            ViewBag.jugadorEntra = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", cambioPartido.jugadorEntra);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", cambioPartido.usuarioModificador);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", cambioPartido.usuarioCreador);
             return View(cambioPartido);
         }
 
         // GET: CambioPartido/Edit/5
-        public async Task<ActionResult> Edit(decimal id)
+        public async Task<ActionResult> Edit(decimal codPartido, decimal codPersona)
         {
-            if (id == null)
+            if (codPartido == null||codPersona==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(id);
+            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(codPartido,codPersona);
             if (cambioPartido == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador", cambioPartido.codPartido);
-            ViewBag.jugadorSale = new SelectList(db.Jugador, "codPersona", "usuarioCreador", cambioPartido.jugadorSale);
-            ViewBag.jugadorEntra = new SelectList(db.Jugador, "codPersona", "usuarioCreador", cambioPartido.jugadorEntra);
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido", cambioPartido.codPartido);
+            ViewBag.jugadorSale = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", cambioPartido.jugadorSale);
+            ViewBag.jugadorEntra = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", cambioPartido.jugadorEntra);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", cambioPartido.usuarioModificador);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", cambioPartido.usuarioCreador);
             return View(cambioPartido);
@@ -103,22 +103,22 @@ namespace Proyecto.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "usuarioCreador", cambioPartido.codPartido);
-            ViewBag.jugadorSale = new SelectList(db.Jugador, "codPersona", "usuarioCreador", cambioPartido.jugadorSale);
-            ViewBag.jugadorEntra = new SelectList(db.Jugador, "codPersona", "usuarioCreador", cambioPartido.jugadorEntra);
+            ViewBag.codPartido = new SelectList(db.Partido, "codPartido", "codPartido", cambioPartido.codPartido);
+            ViewBag.jugadorSale = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", cambioPartido.jugadorSale);
+            ViewBag.jugadorEntra = new SelectList(db.Persona.Where(user => db.Jugador.Select(f => f.codPersona).Contains(user.codPersona)), "codPersona", "nbrPersona", cambioPartido.jugadorEntra);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", cambioPartido.usuarioModificador);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", cambioPartido.usuarioCreador);
             return View(cambioPartido);
         }
 
         // GET: CambioPartido/Delete/5
-        public async Task<ActionResult> Delete(decimal id)
+        public async Task<ActionResult> Delete(decimal codPartido, decimal codPersona)
         {
-            if (id == null)
+            if (codPartido == null || codPersona==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(id);
+            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(codPartido,codPersona);
             if (cambioPartido == null)
             {
                 return HttpNotFound();
@@ -129,9 +129,9 @@ namespace Proyecto.Controllers
         // POST: CambioPartido/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(decimal id)
+        public async Task<ActionResult> DeleteConfirmed(decimal codPartido, decimal codPersona)
         {
-            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(id);
+            CambioPartido cambioPartido = await db.CambioPartido.FindAsync(codPartido, codPersona);
             db.CambioPartido.Remove(cambioPartido);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

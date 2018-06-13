@@ -40,7 +40,7 @@ namespace Proyecto.Controllers
         // GET: Fecha/Create
         public ActionResult Create()
         {
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador");
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo");
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login");
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login");
             return View();
@@ -60,7 +60,7 @@ namespace Proyecto.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador", fecha.codTorneo);
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo", fecha.codTorneo);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", fecha.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", fecha.usuarioModificador);
             return View(fecha);
@@ -78,7 +78,7 @@ namespace Proyecto.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador", fecha.codTorneo);
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo", fecha.codTorneo);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", fecha.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", fecha.usuarioModificador);
             return View(fecha);
@@ -97,7 +97,7 @@ namespace Proyecto.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador", fecha.codTorneo);
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo", fecha.codTorneo);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", fecha.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", fecha.usuarioModificador);
             return View(fecha);

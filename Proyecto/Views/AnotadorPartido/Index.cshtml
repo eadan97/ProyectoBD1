@@ -1,18 +1,33 @@
 ﻿@model IEnumerable<Proyecto.Models.AnotadorPartido>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Anotadores en partido";
 }
 
-<h2>Index</h2>
+<h2>Anotadores en partido</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Partido.codPartido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jugador.FuncionarioDeportivo.Persona.nbrPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.minuto)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.video)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.fechaCreacion)
@@ -20,25 +35,32 @@
         <th>
             @Html.DisplayNameFor(model => model.fechaModificacion)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Partido.usuarioCreador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Jugador.usuarioCreador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario.login)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
-        </th>
+
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Partido.codPartido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jugador.FuncionarioDeportivo.Persona.nbrPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.minuto)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.video)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarioModificador)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.fechaCreacion)
@@ -47,21 +69,9 @@
             @Html.DisplayFor(modelItem => item.fechaModificacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Partido.usuarioCreador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Jugador.usuarioCreador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario.login)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario1.login)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Editar", "Edit", new { item.codPartido, item.codPersona, item.minuto}) |
+            @Html.ActionLink("Detalles", "Details", new { item.codPartido, item.codPersona, item.minuto }) |
+            @Html.ActionLink("Eliminar", "Delete", new { item.codPartido, item.codPersona, item.minuto })
         </td>
     </tr>
 }

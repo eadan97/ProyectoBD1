@@ -1,21 +1,46 @@
 ﻿@model Proyecto.Models.Fecha
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
     <h4>Fecha</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codTorneo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codTorneo)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.fecha1)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.fecha1)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuarioModificador)
         </dd>
 
         <dt>
@@ -34,33 +59,9 @@
             @Html.DisplayFor(model => model.fechaModificacion)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Torneo.usuarioCreador)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Torneo.usuarioCreador)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario.login)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario.login)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario1.login)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario1.login)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.codFecha }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.codFecha }) |
+    @Html.ActionLink("Ir a la lista", "Index")
 </p>

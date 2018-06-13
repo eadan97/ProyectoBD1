@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace Proyecto.Models
 {
     using System;
@@ -14,14 +17,21 @@ namespace Proyecto.Models
     
     public partial class EquipoTorneo
     {
+        [DisplayName("Codigo del equipo")]
         public decimal codEquipo { get; set; }
+        [DisplayName("Codigo del torneo"), DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal codTorneo { get; set; }
+        [DisplayName("Posicion"), DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<decimal> posicion { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
-    
+
         public virtual Equipo Equipo { get; set; }
         public virtual Torneo Torneo { get; set; }
         public virtual Usuario Usuario { get; set; }

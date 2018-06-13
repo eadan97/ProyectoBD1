@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
@@ -19,12 +21,18 @@ namespace Proyecto.Models
         {
             this.Competicion = new HashSet<Competicion>();
         }
-    
+
+        [DisplayName("Codigo del tipo de competicion")]
         public decimal codTipoCompeticion { get; set; }
+        [DisplayName("Nombre del tipo de competicion")]
         public string nbrTipoCompeticion { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

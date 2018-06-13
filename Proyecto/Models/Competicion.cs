@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
@@ -19,14 +21,22 @@ namespace Proyecto.Models
         {
             this.Torneo = new HashSet<Torneo>();
         }
-    
+
+        [DisplayName("Codigo de competicion")]
         public decimal codCompeticion { get; set; }
+        [DisplayName("Nombre de competicion")]
         public string nbrCompeticion { get; set; }
+        [DisplayName("Codigo del tipo de competicion")]
         public decimal codTipoCompeticion { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
+
     
         public virtual TipoCompeticion TipoCompeticion { get; set; }
         public virtual Usuario Usuario { get; set; }

@@ -41,7 +41,7 @@ namespace Proyecto.Controllers
         public ActionResult Create()
         {
             ViewBag.codCompeticion = new SelectList(db.Competicion, "codCompeticion", "nbrCompeticion");
-            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "usuarioCreador");
+            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "codTemporada");
             return View();
         }
 
@@ -52,15 +52,18 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "codTorneo,codCompeticion,codTemporada,usuarioCreador,usuarioModificador,fechaCreacion,fechaModificacion")] Torneo torneo)
         {
+            
             if (ModelState.IsValid)
             {
                 db.Torneo.Add(torneo);
                 await db.SaveChangesAsync();
+                
+
                 return RedirectToAction("Index");
             }
 
             ViewBag.codCompeticion = new SelectList(db.Competicion, "codCompeticion", "nbrCompeticion", torneo.codCompeticion);
-            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "usuarioCreador", torneo.codTemporada);
+            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "codTemporada", torneo.codTemporada);
             return View(torneo);
         }
 
@@ -77,7 +80,7 @@ namespace Proyecto.Controllers
                 return HttpNotFound();
             }
             ViewBag.codCompeticion = new SelectList(db.Competicion, "codCompeticion", "nbrCompeticion", torneo.codCompeticion);
-            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "usuarioCreador", torneo.codTemporada);
+            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "codTemporada", torneo.codTemporada);
             return View(torneo);
         }
 
@@ -91,11 +94,20 @@ namespace Proyecto.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(torneo).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                try
+                {
+                    await db.SaveChangesAsync();
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
                 return RedirectToAction("Index");
             }
             ViewBag.codCompeticion = new SelectList(db.Competicion, "codCompeticion", "nbrCompeticion", torneo.codCompeticion);
-            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "usuarioCreador", torneo.codTemporada);
+            ViewBag.codTemporada = new SelectList(db.Temporada, "codTemporada", "codTemporada", torneo.codTemporada);
             return View(torneo);
         }
 

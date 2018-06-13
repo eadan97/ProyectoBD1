@@ -9,7 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using Proyecto.Models;
 
-namespace Proyecto.Views.Consulta
+namespace Proyecto.Controllers
 {
     public class PartidoController : Controller
     {
@@ -42,7 +42,7 @@ namespace Proyecto.Views.Consulta
         {
             ViewBag.codEquipo1 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo");
             ViewBag.codEquipo2 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo");
-            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "usuarioCreador");
+            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "codFecha");
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login");
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login");
             return View();
@@ -64,7 +64,7 @@ namespace Proyecto.Views.Consulta
 
             ViewBag.codEquipo1 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", partido.codEquipo1);
             ViewBag.codEquipo2 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", partido.codEquipo2);
-            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "usuarioCreador", partido.codFecha);
+            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "codFecha", partido.codFecha);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", partido.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", partido.usuarioModificador);
             return View(partido);
@@ -84,7 +84,7 @@ namespace Proyecto.Views.Consulta
             }
             ViewBag.codEquipo1 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", partido.codEquipo1);
             ViewBag.codEquipo2 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", partido.codEquipo2);
-            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "usuarioCreador", partido.codFecha);
+            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "codFecha", partido.codFecha);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", partido.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", partido.usuarioModificador);
             return View(partido);
@@ -105,7 +105,7 @@ namespace Proyecto.Views.Consulta
             }
             ViewBag.codEquipo1 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", partido.codEquipo1);
             ViewBag.codEquipo2 = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", partido.codEquipo2);
-            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "usuarioCreador", partido.codFecha);
+            ViewBag.codFecha = new SelectList(db.Fecha, "codFecha", "codFecha", partido.codFecha);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", partido.usuarioCreador);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", partido.usuarioModificador);
             return View(partido);

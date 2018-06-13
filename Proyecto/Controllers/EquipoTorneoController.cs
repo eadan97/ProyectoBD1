@@ -23,13 +23,13 @@ namespace Proyecto.Controllers
         }
 
         // GET: EquipoTorneo/Details/5
-        public async Task<ActionResult> Details(decimal id)
+        public async Task<ActionResult> Details(decimal equipo, decimal torneo)
         {
-            if (id == null)
+            if (equipo == null || torneo==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(id);
+            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(equipo, torneo);
             if (equipoTorneo == null)
             {
                 return HttpNotFound();
@@ -41,7 +41,7 @@ namespace Proyecto.Controllers
         public ActionResult Create()
         {
             ViewBag.codEquipo = new SelectList(db.Equipo, "codEquipo", "nombreEquipo");
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador");
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo");
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login");
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login");
             return View();
@@ -62,26 +62,26 @@ namespace Proyecto.Controllers
             }
 
             ViewBag.codEquipo = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", equipoTorneo.codEquipo);
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador", equipoTorneo.codTorneo);
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo", equipoTorneo.codTorneo);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", equipoTorneo.usuarioModificador);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", equipoTorneo.usuarioCreador);
             return View(equipoTorneo);
         }
 
         // GET: EquipoTorneo/Edit/5
-        public async Task<ActionResult> Edit(decimal id)
+        public async Task<ActionResult> Edit(decimal equipo, decimal torneo)
         {
-            if (id == null)
+            if (equipo == null || torneo==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(id);
+            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(equipo, torneo);
             if (equipoTorneo == null)
             {
                 return HttpNotFound();
             }
             ViewBag.codEquipo = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", equipoTorneo.codEquipo);
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador", equipoTorneo.codTorneo);
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo", equipoTorneo.codTorneo);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", equipoTorneo.usuarioModificador);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", equipoTorneo.usuarioCreador);
             return View(equipoTorneo);
@@ -101,20 +101,20 @@ namespace Proyecto.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.codEquipo = new SelectList(db.Equipo, "codEquipo", "nombreEquipo", equipoTorneo.codEquipo);
-            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "usuarioCreador", equipoTorneo.codTorneo);
+            ViewBag.codTorneo = new SelectList(db.Torneo, "codTorneo", "codTorneo", equipoTorneo.codTorneo);
             ViewBag.usuarioModificador = new SelectList(db.Usuario, "login", "login", equipoTorneo.usuarioModificador);
             ViewBag.usuarioCreador = new SelectList(db.Usuario, "login", "login", equipoTorneo.usuarioCreador);
             return View(equipoTorneo);
         }
 
         // GET: EquipoTorneo/Delete/5
-        public async Task<ActionResult> Delete(decimal id)
+        public async Task<ActionResult> Delete(decimal equipo, decimal torneo)
         {
-            if (id == null)
+            if (equipo == null || torneo == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(id);
+            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(equipo, torneo);
             if (equipoTorneo == null)
             {
                 return HttpNotFound();
@@ -125,9 +125,9 @@ namespace Proyecto.Controllers
         // POST: EquipoTorneo/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(decimal id)
+        public async Task<ActionResult> DeleteConfirmed(decimal equipo, decimal torneo)
         {
-            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(id);
+            EquipoTorneo equipoTorneo = await db.EquipoTorneo.FindAsync(equipo, torneo);
             db.EquipoTorneo.Remove(equipoTorneo);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

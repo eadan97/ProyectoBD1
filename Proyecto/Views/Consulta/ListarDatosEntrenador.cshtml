@@ -46,7 +46,7 @@
             @Html.DisplayFor(modelItem => item.Tipo_competicion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Posicion)
+            @($"{item.Posicion:N0}")
         </td>
     </tr>
     }

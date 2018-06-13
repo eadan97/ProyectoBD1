@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="03720c0c9f4642d281c566442dde685a" Name="Diagram1">
+      <Diagram DiagramId="42c835341ddf489f8daf3c2c62abe4fe" Name="Diagram1" ZoomLevel="40">
         <EntityTypeShape EntityType="nsProyecto.AlineacionPartido" Width="1.5" PointX="3" PointY="52.875" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.AnotadorPartido" Width="1.5" PointX="6" PointY="54" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Arbitro" Width="1.5" PointX="8.25" PointY="55.125" IsExpanded="true" />
@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="nsProyecto.Direccion" Width="1.5" PointX="3" PointY="69.5" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Entrenador" Width="1.5" PointX="3" PointY="49.125" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.EntrenadorTitulo" Width="1.5" PointX="5.25" PointY="82.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="nsProyecto.Equipo" Width="1.5" PointX="5.25" PointY="66.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Equipo" Width="1.5" PointX="5.25" PointY="66.875" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.EquipoTorneo" Width="1.5" PointX="13.75" PointY="73.875" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Especialidad" Width="1.5" PointX="3" PointY="83.25" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.EspecialidadJugador" Width="1.5" PointX="15.75" PointY="66.125" IsExpanded="true" />
@@ -23,17 +23,17 @@
         <EntityTypeShape EntityType="nsProyecto.Federacion" Width="1.5" PointX="3" PointY="86.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.FuncionarioCorreo" Width="1.5" PointX="9" PointY="51.25" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.FuncionarioDeportivo" Width="1.5" PointX="8.25" PointY="75.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="nsProyecto.FuncionarioDireccion" Width="1.5" PointX="8.25" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.FuncionarioDireccion" Width="1.5" PointX="8.25" PointY="61.625" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Hist_AlineacionPartido" Width="1.5" PointX="9.75" PointY="69.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="nsProyecto.Hist_AnotadorPartido" Width="1.5" PointX="10.75" PointY="73.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_AnotadorPartido" Width="1.5" PointX="10.75" PointY="73.375" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Hist_CambioPartido" Width="1.5" PointX="12.75" PointY="70.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="nsProyecto.Hist_EquipoTorneo" Width="1.5" PointX="7.5" PointY="67.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_EquipoTorneo" Width="1.5" PointX="7.5" PointY="67.625" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Hist_Fecha" Width="1.5" PointX="7.5" PointY="81.625" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Hist_Partido" Width="1.5" PointX="7.5" PointY="70.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Hist_PartidoArbitro" Width="1.5" PointX="10.5" PointY="63.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="nsProyecto.Hist_Torneo" Width="1.5" PointX="5.25" PointY="63.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Hist_Torneo" Width="1.5" PointX="5.25" PointY="63.625" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Jugador" Width="1.5" PointX="13.5" PointY="64.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="nsProyecto.Oferta" Width="1.5" PointX="13.5" PointY="60" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Oferta" Width="1.5" PointX="13.5" PointY="60.125" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Partido" Width="1.5" PointX="19" PointY="59.375" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.PartidoArbitro" Width="1.5" PointX="10.5" PointY="55" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Persona" Width="1.5" PointX="3" PointY="99.125" IsExpanded="true" />
@@ -42,7 +42,7 @@
         <EntityTypeShape EntityType="nsProyecto.TipoCompeticion" Width="1.5" PointX="3" PointY="106.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.TituloAcademico" Width="1.5" PointX="3" PointY="110.25" IsExpanded="true" />
         <EntityTypeShape EntityType="nsProyecto.Torneo" Width="1.5" PointX="7.5" PointY="90.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="nsProyecto.Usuario" Width="1.5" PointX="0.75" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsProyecto.Usuario" Width="1.5" PointX="0.75" PointY="49.5" IsExpanded="true" />
         <AssociationConnector Association="nsProyecto.AlineacionPartido_FK1" ManuallyRouted="false" />
         <AssociationConnector Association="nsProyecto.AlineacionPartido_FK2" ManuallyRouted="false" />
         <AssociationConnector Association="nsProyecto.AlineacionPartido_FK3" ManuallyRouted="false" />

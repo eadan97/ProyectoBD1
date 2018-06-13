@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
@@ -14,12 +16,19 @@ namespace Proyecto.Models
     
     public partial class EspecialidadJugador
     {
+        [DisplayName("Codigo de especialidad")]
         public decimal codEspecialidad { get; set; }
+        [DisplayName("Grado de especialidad")]
         public decimal gradoEspecialidad { get; set; }
+        [DisplayName("Codigo del jugador")]
         public decimal codPersona { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
     
         public virtual Especialidad Especialidad { get; set; }

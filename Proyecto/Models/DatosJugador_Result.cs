@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
@@ -14,9 +16,13 @@ namespace Proyecto.Models
     public partial class DatosJugador_Result
     {
         public string Equipo { get; set; }
+        [DisplayName("Fecha de contratacion")]
         public System.DateTime Fecha_contratacion { get; set; }
+        [DisplayName("Fecha de baja")]
         public System.DateTime Fecha_baja { get; set; }
+        [DisplayName("Nombre de competicion")]
         public string Nombre_competicion { get; set; }
+        [DisplayName("Tipo de competicion")]
         public string Tipo_competicion { get; set; }
     }
 }

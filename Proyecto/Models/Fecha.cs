@@ -7,11 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Fecha
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,13 +22,19 @@ namespace Proyecto.Models
         {
             this.Partido = new HashSet<Partido>();
         }
-    
+        [DisplayName("Codigo de fecha"), DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal codFecha { get; set; }
+        [DisplayName("Codigo del torneo"), DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal codTorneo { get; set; }
+        [DisplayName("Fecha")]
         public System.DateTime fecha1 { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario Modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modifiacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
     
         public virtual Torneo Torneo { get; set; }

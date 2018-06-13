@@ -7,17 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace Proyecto.Models
 {
     using System;
     
     public partial class Encuentros_Result
     {
+        [DisplayName("Equipo 1")]
         public decimal Equipo_1 { get; set; }
+        [DisplayName("Equipo 2")]
         public decimal Equipo_2 { get; set; }
+        [DisplayName("Goles del equipo 1")]
         public Nullable<decimal> Goles_del_equipo_1 { get; set; }
+        [DisplayName("Goles del equipo 2")]
         public Nullable<decimal> Goles_del_equipo_2 { get; set; }
         public System.DateTime Fecha { get; set; }
+        [DisplayName("Nombre de la competicion")]
         public string Nombre_de_la_competicion { get; set; }
     }
 }

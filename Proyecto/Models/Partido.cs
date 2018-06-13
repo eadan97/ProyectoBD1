@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace Proyecto.Models
 {
     using System;
@@ -22,16 +25,25 @@ namespace Proyecto.Models
             this.CambioPartido = new HashSet<CambioPartido>();
             this.PartidoArbitro = new HashSet<PartidoArbitro>();
         }
-    
+        [DisplayName("Codigo del partido"), DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal codPartido { get; set; }
+        [DisplayName("Codigo de fecha")]
         public Nullable<decimal> codFecha { get; set; }
+        [DisplayName("Codigo del equipo 1"), DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal codEquipo1 { get; set; }
+        [DisplayName("Codigo del equipo 2"), DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal codEquipo2 { get; set; }
+        [DisplayName("Goles del equipo 2"), DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<decimal> golesEquipo1 { get; set; }
+        [DisplayName("Goles del equipo 2"), DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<decimal> golesEquipo2 { get; set; }
+        [DisplayName("Usuario creador")]
         public string usuarioCreador { get; set; }
+        [DisplayName("Usuario modificador")]
         public string usuarioModificador { get; set; }
+        [DisplayName("Fecha de creacion")]
         public Nullable<System.DateTime> fechaCreacion { get; set; }
+        [DisplayName("Fecha de modificacion")]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

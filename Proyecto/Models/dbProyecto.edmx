@@ -14,8 +14,8 @@
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codEquipo" Type="numeric" Precision="5" Scale="0" Nullable="false" />
           <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -29,8 +29,8 @@
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="minuto" Type="numeric" Precision="2" Scale="0" Nullable="false" />
           <Property Name="video" Type="varchar(max)" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -40,8 +40,8 @@
           </Key>
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codCategoria" Type="numeric" Precision="3" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -54,8 +54,8 @@
           <Property Name="jugadorSale" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="jugadorEntra" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="minuto" Type="numeric" Precision="2" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -65,8 +65,8 @@
           </Key>
           <Property Name="codCategoria" Type="numeric" Precision="3" Scale="0" Nullable="false" />
           <Property Name="nbrCategoria" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -77,8 +77,8 @@
           <Property Name="codCompeticion" Type="numeric" Precision="2" Scale="0" Nullable="false" />
           <Property Name="nbrCompeticion" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="codTipoCompeticion" Type="numeric" Precision="2" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -93,8 +93,8 @@
           <Property Name="importe" Type="numeric" Precision="12" Scale="0" Nullable="false" />
           <Property Name="fechaContratacion" Type="date" Nullable="false" />
           <Property Name="fechaBaja" Type="date" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -106,8 +106,8 @@
           <Property Name="pais" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="ciudad" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="detalle" Type="varchar(max)" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -117,8 +117,8 @@
           </Key>
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="inicioCarrera" Type="datetime" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -129,8 +129,8 @@
           </Key>
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codTitulo" Type="numeric" Precision="4" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -142,8 +142,8 @@
           <Property Name="nombreEquipo" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaFundacion" Type="datetime" Nullable="false" />
           <Property Name="codFederacion" Type="numeric" Precision="4" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -155,8 +155,8 @@
           <Property Name="codEquipo" Type="numeric" Precision="5" Scale="0" Nullable="false" />
           <Property Name="codTorneo" Type="numeric" Precision="6" Scale="0" Nullable="false" />
           <Property Name="posicion" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -166,8 +166,8 @@
           </Key>
           <Property Name="codEspecialidad" Type="numeric" Precision="3" Scale="0" Nullable="false" />
           <Property Name="nbrEspecialidad" Type="varchar" MaxLength="30" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -180,8 +180,8 @@
           <Property Name="codEspecialidad" Type="numeric" Precision="3" Scale="0" Nullable="false" />
           <Property Name="gradoEspecialidad" Type="numeric" Precision="2" Scale="0" Nullable="false" />
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -192,8 +192,8 @@
           <Property Name="codFecha" Type="numeric" Precision="10" Scale="0" Nullable="false" />
           <Property Name="codTorneo" Type="numeric" Precision="6" Scale="0" Nullable="false" />
           <Property Name="fecha" Type="datetime" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -204,8 +204,8 @@
           <Property Name="codFederacion" Type="numeric" Precision="4" Scale="0" Nullable="false" />
           <Property Name="nbrFederacion" Type="varchar" MaxLength="60" />
           <Property Name="fechaFundacion" Type="datetime" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -216,8 +216,8 @@
           </Key>
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="correoElectronico" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -230,8 +230,8 @@
           <Property Name="telefonoFijo" Type="numeric" Precision="12" Scale="0" Nullable="false" />
           <Property Name="foto" Type="varchar(max)" />
           <Property Name="telefonoCelular" Type="numeric" Precision="12" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -242,8 +242,8 @@
           </Key>
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codDireccion" Type="numeric" Precision="6" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -331,8 +331,8 @@
           <Property Name="pesoJugador" Type="numeric" Precision="4" Scale="2" Nullable="false" />
           <Property Name="alturaJugador" Type="numeric" Precision="4" Scale="2" Nullable="false" />
           <Property Name="codEquipo" Type="numeric" Precision="5" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -346,8 +346,8 @@
           <Property Name="codEquipo" Type="numeric" Precision="5" Scale="0" Nullable="false" />
           <Property Name="importe" Type="numeric" Precision="12" Scale="0" Nullable="false" />
           <Property Name="fecha" Type="date" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -361,8 +361,8 @@
           <Property Name="codEquipo2" Type="numeric" Precision="5" Scale="0" Nullable="false" />
           <Property Name="golesEquipo1" Type="numeric" Precision="2" Scale="0" />
           <Property Name="golesEquipo2" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -375,8 +375,8 @@
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="calificacion" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -386,8 +386,8 @@
           </Key>
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="nbrPersona" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -398,8 +398,8 @@
           </Key>
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codEquipo" Type="numeric" Precision="5" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -410,8 +410,8 @@
           <Property Name="codTemporada" Type="numeric" Precision="4" Scale="0" Nullable="false" />
           <Property Name="fechaInicio" Type="date" Nullable="false" />
           <Property Name="fechaFin" Type="date" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -421,8 +421,8 @@
           </Key>
           <Property Name="codTipoCompeticion" Type="numeric" Precision="2" Scale="0" Nullable="false" />
           <Property Name="nbrTipoCompeticion" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -433,8 +433,8 @@
           <Property Name="codTitulo" Type="numeric" Precision="4" Scale="0" Nullable="false" />
           <Property Name="nombreTitulo" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="almaMater" Type="varchar" MaxLength="40" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -445,8 +445,8 @@
           <Property Name="codTorneo" Type="numeric" Precision="6" Scale="0" Nullable="false" />
           <Property Name="codCompeticion" Type="numeric" Precision="2" Scale="0" Nullable="false" />
           <Property Name="codTemporada" Type="numeric" Precision="4" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="usuarioModificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="usuarioCreador" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioModificador" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="fechaCreacion" Type="datetime" />
           <Property Name="fechaModificacion" Type="datetime" />
         </EntityType>
@@ -454,7 +454,7 @@
           <Key>
             <PropertyRef Name="login" />
           </Key>
-          <Property Name="login" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="login" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="codPersona" Type="numeric" Precision="9" Scale="0" />
         </EntityType>
         <Association Name="AlineacionPartido_FK1">
@@ -2300,8 +2300,8 @@
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codEquipo" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
           <Property Name="estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Partido" Relationship="Self.AlineacionPartido_FK1" FromRole="AlineacionPartido" ToRole="Partido" />
@@ -2320,8 +2320,8 @@
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="minuto" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
           <Property Name="video" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Partido" Relationship="Self.AnotadorPartido_FK1" FromRole="AnotadorPartido" ToRole="Partido" />
@@ -2335,8 +2335,8 @@
           </Key>
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codCategoria" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Categoria" Relationship="Self.Arbitro_FK1" FromRole="Arbitro" ToRole="Categoria" />
@@ -2354,8 +2354,8 @@
           <Property Name="jugadorSale" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="jugadorEntra" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="minuto" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Partido" Relationship="Self.CambioPartido_FK1" FromRole="CambioPartido" ToRole="Partido" />
@@ -2370,8 +2370,8 @@
           </Key>
           <Property Name="codCategoria" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
           <Property Name="nbrCategoria" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Arbitro" Relationship="Self.Arbitro_FK1" FromRole="Categoria" ToRole="Arbitro" />
@@ -2385,8 +2385,8 @@
           <Property Name="codCompeticion" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
           <Property Name="nbrCompeticion" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="codTipoCompeticion" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="TipoCompeticion" Relationship="Self.Competicion_FK1" FromRole="Competicion" ToRole="TipoCompeticion" />
@@ -2405,8 +2405,8 @@
           <Property Name="importe" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
           <Property Name="fechaContratacion" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="fechaBaja" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Equipo" Relationship="Self.Contratacion_FK1" FromRole="Contratacion" ToRole="Equipo" />
@@ -2422,8 +2422,8 @@
           <Property Name="pais" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ciudad" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="detalle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Usuario" Relationship="Self.Direccion_FK1" FromRole="Direccion" ToRole="Usuario" />
@@ -2436,8 +2436,8 @@
           </Key>
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="inicioCarrera" Type="DateTime" Precision="3" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="FuncionarioDeportivo" Relationship="Self.Entrenador_FK1" FromRole="Entrenador" ToRole="FuncionarioDeportivo" />
@@ -2452,8 +2452,8 @@
           </Key>
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codTitulo" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Entrenador" Relationship="Self.EntrenadorTitulo_FK1" FromRole="EntrenadorTitulo" ToRole="Entrenador" />
@@ -2469,8 +2469,8 @@
           <Property Name="nombreEquipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaFundacion" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="codFederacion" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="AlineacionPartido" Relationship="Self.AlineacionPartido_FK3" FromRole="Equipo" ToRole="AlineacionPartido" />
@@ -2497,8 +2497,8 @@
           <Property Name="codEquipo" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
           <Property Name="codTorneo" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
           <Property Name="posicion" Type="Decimal" Precision="2" Scale="0" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Equipo" Relationship="Self.EquipoCompeticion_FK2" FromRole="EquipoTorneo" ToRole="Equipo" />
@@ -2512,8 +2512,8 @@
           </Key>
           <Property Name="codEspecialidad" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
           <Property Name="nbrEspecialidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Usuario" Relationship="Self.Especialidad_FK1" FromRole="Especialidad" ToRole="Usuario" />
@@ -2529,8 +2529,8 @@
           <Property Name="codEspecialidad" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
           <Property Name="gradoEspecialidad" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Especialidad" Relationship="Self.EspecialidadJugador_FK2" FromRole="EspecialidadJugador" ToRole="Especialidad" />
@@ -2545,8 +2545,8 @@
           <Property Name="codFecha" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="codTorneo" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
           <Property Name="fecha1" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Torneo" Relationship="Self.Fecha_FK1" FromRole="Fecha" ToRole="Torneo" />
@@ -2561,8 +2561,8 @@
           <Property Name="codFederacion" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
           <Property Name="nbrFederacion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="fechaFundacion" Type="DateTime" Precision="3" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Equipo" Relationship="Self.Equipo_FK3" FromRole="Federacion" ToRole="Equipo" />
@@ -2576,8 +2576,8 @@
           </Key>
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="correoElectronico" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="FuncionarioDeportivo" Relationship="Self.FuncionarioCorreo_FK1" FromRole="FuncionarioCorreo" ToRole="FuncionarioDeportivo" />
@@ -2593,8 +2593,8 @@
           <Property Name="telefonoFijo" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
           <Property Name="foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="telefonoCelular" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Contratacion" Relationship="Self.Contratacion_FK2" FromRole="FuncionarioDeportivo" ToRole="Contratacion" />
@@ -2614,8 +2614,8 @@
           </Key>
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codDireccion" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Direccion" Relationship="Self.JugadorDireccion_FK2" FromRole="FuncionarioDireccion" ToRole="Direccion" />
@@ -2728,8 +2728,8 @@
           <Property Name="pesoJugador" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
           <Property Name="alturaJugador" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
           <Property Name="codEquipo" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="AlineacionPartido" Relationship="Self.AlineacionPartido_FK2" FromRole="Jugador" ToRole="AlineacionPartido" />
@@ -2756,8 +2756,8 @@
           <Property Name="codEquipo" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
           <Property Name="importe" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
           <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Equipo" Relationship="Self.Oferta_FK1" FromRole="Oferta" ToRole="Equipo" />
@@ -2775,8 +2775,8 @@
           <Property Name="codEquipo2" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
           <Property Name="golesEquipo1" Type="Decimal" Precision="2" Scale="0" />
           <Property Name="golesEquipo2" Type="Decimal" Precision="2" Scale="0" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="AlineacionPartido" Relationship="Self.AlineacionPartido_FK1" FromRole="Partido" ToRole="AlineacionPartido" />
@@ -2798,8 +2798,8 @@
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="calificacion" Type="Decimal" Precision="2" Scale="0" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Arbitro" Relationship="Self.PartidoArbitro_FK1" FromRole="PartidoArbitro" ToRole="Arbitro" />
@@ -2813,8 +2813,8 @@
           </Key>
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="nbrPersona" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="FuncionarioDeportivo" Relationship="Self.FuncionarioDeportivo_FK1" FromRole="Persona" ToRole="FuncionarioDeportivo" />
@@ -2830,8 +2830,8 @@
           </Key>
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
           <Property Name="codEquipo" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Equipo" Relationship="Self.SocioEquipo_FK1" FromRole="SocioEquipo" ToRole="Equipo" />
@@ -2846,8 +2846,8 @@
           <Property Name="codTemporada" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
           <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Usuario" Relationship="Self.Temporada_FK1" FromRole="Temporada" ToRole="Usuario" />
@@ -2860,8 +2860,8 @@
           </Key>
           <Property Name="codTipoCompeticion" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
           <Property Name="nbrTipoCompeticion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Competicion" Relationship="Self.Competicion_FK1" FromRole="TipoCompeticion" ToRole="Competicion" />
@@ -2875,8 +2875,8 @@
           <Property Name="codTitulo" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
           <Property Name="nombreTitulo" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="almaMater" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="EntrenadorTitulo" Relationship="Self.EntrenadorTitulo_FK2" FromRole="TituloAcademico" ToRole="EntrenadorTitulo" />
@@ -2890,8 +2890,8 @@
           <Property Name="codTorneo" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
           <Property Name="codCompeticion" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
           <Property Name="codTemporada" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
-          <Property Name="usuarioCreador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="usuarioModificador" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCreador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioModificador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="fechaModificacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Competicion" Relationship="Self.Torneo_FK1" FromRole="Torneo" ToRole="Competicion" />
@@ -2903,7 +2903,7 @@
           <Key>
             <PropertyRef Name="login" />
           </Key>
-          <Property Name="login" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="codPersona" Type="Decimal" Precision="9" Scale="0" />
           <NavigationProperty Name="AlineacionPartido" Relationship="Self.AlineacionPartido_FK4" FromRole="Usuario" ToRole="AlineacionPartido" />
           <NavigationProperty Name="AlineacionPartido1" Relationship="Self.AlineacionPartido_FK5" FromRole="Usuario" ToRole="AlineacionPartido" />
@@ -4797,18 +4797,6 @@
           <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
           <Property Type="Decimal" Name="Promedio" Nullable="true" Precision="38" Scale="6" />
         </ComplexType>
-        <ComplexType Name="Encuentros_Result">
-          <Property Type="Decimal" Name="Equipo_1" Nullable="false" Precision="5" Scale="0" />
-          <Property Type="Decimal" Name="Equipo_2" Nullable="false" Precision="5" Scale="0" />
-          <Property Type="Decimal" Name="Goles_del_equipo_1" Nullable="true" Precision="2" Scale="0" />
-          <Property Type="Decimal" Name="Goles_del_equipo_2" Nullable="true" Precision="2" Scale="0" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
-          <Property Type="String" Name="Nombre_de_la_competicion" Nullable="false" MaxLength="15" />
-        </ComplexType>
-        <ComplexType Name="Goleadores_Result">
-          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
-          <Property Type="Int32" Name="Goles" Nullable="true" />
-        </ComplexType>
         <ComplexType Name="DatosEntrenador_Result">
           <Property Type="String" Name="Equipo" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="Fecha_contratacion" Nullable="false" />
@@ -4823,6 +4811,18 @@
           <Property Type="DateTime" Name="Fecha_baja" Nullable="false" />
           <Property Type="String" Name="Nombre_competicion" Nullable="false" MaxLength="15" />
           <Property Type="String" Name="Tipo_competicion" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="Encuentros_Result">
+          <Property Type="Decimal" Name="Equipo_1" Nullable="false" Precision="5" Scale="0" />
+          <Property Type="Decimal" Name="Equipo_2" Nullable="false" Precision="5" Scale="0" />
+          <Property Type="Decimal" Name="Goles_del_equipo_1" Nullable="true" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="Goles_del_equipo_2" Nullable="true" Precision="2" Scale="0" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Nombre_de_la_competicion" Nullable="false" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="Goleadores_Result">
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="Goles" Nullable="true" />
         </ComplexType>
         <ComplexType Name="TablaGeneral_Result">
           <Property Type="String" Name="nbrEquipo" Nullable="true" MaxLength="50" />
