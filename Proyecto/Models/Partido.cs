@@ -33,7 +33,7 @@ namespace Proyecto.Models
         public decimal codEquipo1 { get; set; }
         [DisplayName("Codigo del equipo 2"), DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal codEquipo2 { get; set; }
-        [DisplayName("Goles del equipo 2"), DisplayFormat(DataFormatString = "{0:N0}")]
+        [DisplayName("Goles del equipo 1"), DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<decimal> golesEquipo1 { get; set; }
         [DisplayName("Goles del equipo 2"), DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<decimal> golesEquipo2 { get; set; }
