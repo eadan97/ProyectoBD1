@@ -54,10 +54,10 @@ namespace Proyecto.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> DatosJugador(int codEquipo1, int codEquipo2, DateTime fecha)
+        public async Task<ActionResult> DatosJugador(int codPersona)
         {
-            var list = db.Encuentros(codEquipo1, codEquipo2, fecha);
-            return View("ListarEncuentros", list);
+            var list = db.DatosJugador(codPersona);
+            return View("ListarDatosJugador", list);
         }
         public async Task<ActionResult> DatosEntrenador()
         {
@@ -65,11 +65,24 @@ namespace Proyecto.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> DatosEntrenador(int codEquipo1, int codEquipo2, DateTime fecha)
+        public async Task<ActionResult> DatosEntrenador(int codPersona)
         {
-            var list = db.Encuentros(codEquipo1, codEquipo2, fecha);
-            return View("ListarEncuentros", list);
+            var list = db.DatosEntrenador(codPersona);
+            return View("ListarDatosEntrenador", list);
         }
+
+        public async Task<ActionResult> TablaGeneral()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> TablaGeneral(int codCompetencia, int codTemporada)
+        {
+            var list = db.TablaGeneral(codCompetencia, codTemporada);
+            return View("ListarTablaGeneral", list);
+        }
+
         /*public async Task<ActionResult> ListarArbitrosTorneo()
         {
 

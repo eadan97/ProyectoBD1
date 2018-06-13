@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Proyecto.Models.TablaGeneral_Result>
+
+@{
+    ViewBag.Title = "Tabla General";
+}
+
+<h2>Goleadores entre encuentros</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nbrEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pjugados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pganados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pperdidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pempatados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gfavor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gcontra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ptotales)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(modelitem => item.nbrEquipo)
+            </th>
+            <th>
+                @Html.DisplayFor(modelitem => item.pjugados)
+            </th>
+            <th>
+                @Html.DisplayFor(modelitem => item.pganados)
+            </th>
+            <th>
+                @Html.DisplayFor(modelitem => item.pperdidos)
+            </th>
+            <th>
+                @Html.DisplayFor(modelitem => item.pempatados)
+            </th>
+            <th>
+                @Html.DisplayFor(modelitem => item.gfavor)
+            </th>
+            <th>
+                @Html.DisplayFor(modelitem => item.gcontra)
+            </th>
+            <th>
+                @Html.DisplayFor(modelitem => item.ptotales)
+            </th>
+        </tr>
+    }
+</table>

@@ -446,6 +446,12 @@
     <Content Include="Views\Consulta\ListarGoleadores.cshtml" />
     <Content Include="Views\Consulta\ListarEncuentros.cshtml" />
     <Content Include="Views\Consulta\Encuentros.cshtml" />
+    <Content Include="Views\Consulta\DatosJugador.cshtml" />
+    <Content Include="Views\Consulta\ListarDatosEntrenador.cshtml" />
+    <Content Include="Views\Consulta\DatosEntrenador.cshtml" />
+    <Content Include="Views\Consulta\ListarDatosJugador.cshtml" />
+    <Content Include="Views\Consulta\TablaGeneral.cshtml" />
+    <Content Include="Views\Consulta\ListarTablaGeneral.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

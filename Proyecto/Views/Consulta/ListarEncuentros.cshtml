@@ -4,7 +4,7 @@
     ViewBag.Title = "Encuentros";
 }
 
-<h2>Encuentros entre encuentros</h2>
+<h2>Encuentros entre equipos</h2>
 
 <table class="table">
     <tr>
@@ -31,19 +31,19 @@
     @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Equipo_1)
+                @Html.DisplayFor(modelItem => item.Equipo_1) <!-- Pasar de decimal a int -->
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Equipo_2)
+                @Html.DisplayFor(modelItem => item.Equipo_2) <!-- Pasar de decimal a int -->
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Fecha)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Goles_del_equipo_1)
+                @Html.DisplayFor(modelItem => item.Goles_del_equipo_1) <!-- Pasar de decimal a int -->
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Goles_del_equipo_2)
+                @Html.DisplayFor(modelItem => item.Goles_del_equipo_2) <!-- Pasar de decimal a int -->
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nombre_de_la_competicion)

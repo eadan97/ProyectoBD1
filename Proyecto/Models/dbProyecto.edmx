@@ -4788,7 +4788,7 @@
             <Parameter Name="codEquipo2" Mode="In" Type="Int32" />
             <Parameter Name="fecha" Mode="In" Type="DateTime" />
           </FunctionImport>
-          <FunctionImport Name="TablaGeneral">
+          <FunctionImport Name="TablaGeneral" ReturnType="Collection(nsProyecto.TablaGeneral_Result)">
             <Parameter Name="codCompetencia" Mode="In" Type="Int32" />
             <Parameter Name="codTemporada" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -4823,6 +4823,16 @@
           <Property Type="DateTime" Name="Fecha_baja" Nullable="false" />
           <Property Type="String" Name="Nombre_competicion" Nullable="false" MaxLength="15" />
           <Property Type="String" Name="Tipo_competicion" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="TablaGeneral_Result">
+          <Property Type="String" Name="nbrEquipo" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="pjugados" Nullable="true" />
+          <Property Type="Int32" Name="pganados" Nullable="true" />
+          <Property Type="Int32" Name="pperdidos" Nullable="true" />
+          <Property Type="Int32" Name="pempatados" Nullable="true" />
+          <Property Type="Int32" Name="gfavor" Nullable="true" />
+          <Property Type="Int32" Name="gcontra" Nullable="true" />
+          <Property Type="Int32" Name="ptotales" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5353,6 +5363,18 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="TablaGeneral" FunctionName="nsProyecto.Store.TablaGeneral">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="nsProyecto.TablaGeneral_Result">
+                <ScalarProperty Name="nbrEquipo" ColumnName="nbrEquipo" />
+                <ScalarProperty Name="pjugados" ColumnName="pjugados" />
+                <ScalarProperty Name="pganados" ColumnName="pganados" />
+                <ScalarProperty Name="pperdidos" ColumnName="pperdidos" />
+                <ScalarProperty Name="pempatados" ColumnName="pempatados" />
+                <ScalarProperty Name="gfavor" ColumnName="gfavor" />
+                <ScalarProperty Name="gcontra" ColumnName="gcontra" />
+                <ScalarProperty Name="ptotales" ColumnName="ptotales" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
