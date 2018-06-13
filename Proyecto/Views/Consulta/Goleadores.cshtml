@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Goleadores";
+}
+
+<h2>Goleadores entre dos equipos</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Torneo</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2">Codigo del equipo 1</label>
+        <div class="col-md-10">
+            <input id="codEquipo1" name="codEquipo1" type="number" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Codigo del equipo 2</label>
+        <div class="col-md-10">
+            <input id="codEquipo2" name="codEquipo2" type="number" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Fecha de inicio de busqueda</label>
+        <div class="col-md-10">
+            <input id="fecha" name="fecha" type="date" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Consultar" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

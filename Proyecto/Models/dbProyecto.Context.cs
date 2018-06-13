@@ -149,7 +149,7 @@ namespace Proyecto.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Goleadores_Result>("Goleadores", codEquipo1Parameter, codEquipo2Parameter, fechaParameter);
         }
     
-        public virtual ObjectResult<TablaGeneral_Result> TablaGeneral(Nullable<int> codCompetencia, Nullable<int> codTemporada)
+        public virtual int TablaGeneral(Nullable<int> codCompetencia, Nullable<int> codTemporada)
         {
             var codCompetenciaParameter = codCompetencia.HasValue ?
                 new ObjectParameter("codCompetencia", codCompetencia) :
@@ -159,7 +159,7 @@ namespace Proyecto.Models
                 new ObjectParameter("codTemporada", codTemporada) :
                 new ObjectParameter("codTemporada", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TablaGeneral_Result>("TablaGeneral", codCompetenciaParameter, codTemporadaParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("TablaGeneral", codCompetenciaParameter, codTemporadaParameter);
         }
     }
 }

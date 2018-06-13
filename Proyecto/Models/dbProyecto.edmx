@@ -4788,51 +4788,41 @@
             <Parameter Name="codEquipo2" Mode="In" Type="Int32" />
             <Parameter Name="fecha" Mode="In" Type="DateTime" />
           </FunctionImport>
-          <FunctionImport Name="TablaGeneral" ReturnType="Collection(nsProyecto.TablaGeneral_Result)">
+          <FunctionImport Name="TablaGeneral">
             <Parameter Name="codCompetencia" Mode="In" Type="Int32" />
             <Parameter Name="codTemporada" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="ArbitrosTorneo_Result">
-          <Property Type="String" Name="nbrPersona" Nullable="false" MaxLength="30" />
-          <Property Type="Decimal" Name="Column1" Nullable="true" Precision="38" Scale="6" />
-        </ComplexType>
-        <ComplexType Name="DatosEntrenador_Result">
-          <Property Type="String" Name="nombreEquipo" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="fechaContratacion" Nullable="false" />
-          <Property Type="DateTime" Name="fechaBaja" Nullable="false" />
-          <Property Type="String" Name="nbrCompeticion" Nullable="false" MaxLength="15" />
-          <Property Type="String" Name="nbrTipoCompeticion" Nullable="false" MaxLength="10" />
-          <Property Type="Decimal" Name="posicion" Nullable="true" Precision="2" Scale="0" />
-        </ComplexType>
-        <ComplexType Name="DatosJugador_Result">
-          <Property Type="String" Name="nombreEquipo" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="fechaContratacion" Nullable="false" />
-          <Property Type="DateTime" Name="fechaBaja" Nullable="false" />
-          <Property Type="String" Name="nbrCompeticion" Nullable="false" MaxLength="15" />
-          <Property Type="String" Name="nbrTipoCompeticion" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="Promedio" Nullable="true" Precision="38" Scale="6" />
         </ComplexType>
         <ComplexType Name="Encuentros_Result">
-          <Property Type="Decimal" Name="codEquipo1" Nullable="false" Precision="5" Scale="0" />
-          <Property Type="Decimal" Name="codEquipo2" Nullable="false" Precision="5" Scale="0" />
-          <Property Type="Decimal" Name="golesEquipo1" Nullable="true" Precision="2" Scale="0" />
-          <Property Type="Decimal" Name="golesEquipo2" Nullable="true" Precision="2" Scale="0" />
-          <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
-          <Property Type="String" Name="nbrCompeticion" Nullable="false" MaxLength="15" />
+          <Property Type="Decimal" Name="Equipo_1" Nullable="false" Precision="5" Scale="0" />
+          <Property Type="Decimal" Name="Equipo_2" Nullable="false" Precision="5" Scale="0" />
+          <Property Type="Decimal" Name="Goles_del_equipo_1" Nullable="true" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="Goles_del_equipo_2" Nullable="true" Precision="2" Scale="0" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Nombre_de_la_competicion" Nullable="false" MaxLength="15" />
         </ComplexType>
         <ComplexType Name="Goleadores_Result">
-          <Property Type="String" Name="nbrPersona" Nullable="false" MaxLength="30" />
-          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="Goles" Nullable="true" />
         </ComplexType>
-        <ComplexType Name="TablaGeneral_Result">
-          <Property Type="String" Name="nbrEquipo" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="pjugados" Nullable="true" />
-          <Property Type="Int32" Name="pganados" Nullable="true" />
-          <Property Type="Int32" Name="pperdidos" Nullable="true" />
-          <Property Type="Int32" Name="pempatados" Nullable="true" />
-          <Property Type="Int32" Name="gfavor" Nullable="true" />
-          <Property Type="Int32" Name="gcontra" Nullable="true" />
-          <Property Type="Int32" Name="ptotales" Nullable="true" />
+        <ComplexType Name="DatosEntrenador_Result">
+          <Property Type="String" Name="Equipo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Fecha_contratacion" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_baja" Nullable="false" />
+          <Property Type="String" Name="Nombre_competicion" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Tipo_competicion" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="Posicion" Nullable="true" Precision="2" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="DatosJugador_Result">
+          <Property Type="String" Name="Equipo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Fecha_contratacion" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_baja" Nullable="false" />
+          <Property Type="String" Name="Nombre_competicion" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Tipo_competicion" Nullable="false" MaxLength="10" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5312,43 +5302,43 @@
           <FunctionImportMapping FunctionImportName="ArbitrosTorneo" FunctionName="nsProyecto.Store.ArbitrosTorneo">
             <ResultMapping>
               <ComplexTypeMapping TypeName="nsProyecto.ArbitrosTorneo_Result">
-                <ScalarProperty Name="nbrPersona" ColumnName="nbrPersona" />
-                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Promedio" ColumnName="Promedio" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="DatosEntrenador" FunctionName="nsProyecto.Store.DatosEntrenador">
             <ResultMapping>
               <ComplexTypeMapping TypeName="nsProyecto.DatosEntrenador_Result">
-                <ScalarProperty Name="nombreEquipo" ColumnName="nombreEquipo" />
-                <ScalarProperty Name="fechaContratacion" ColumnName="fechaContratacion" />
-                <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
-                <ScalarProperty Name="nbrCompeticion" ColumnName="nbrCompeticion" />
-                <ScalarProperty Name="nbrTipoCompeticion" ColumnName="nbrTipoCompeticion" />
-                <ScalarProperty Name="posicion" ColumnName="posicion" />
+                <ScalarProperty Name="Equipo" ColumnName="Equipo" />
+                <ScalarProperty Name="Fecha_contratacion" ColumnName="Fecha contratacion" />
+                <ScalarProperty Name="Fecha_baja" ColumnName="Fecha baja" />
+                <ScalarProperty Name="Nombre_competicion" ColumnName="Nombre competicion" />
+                <ScalarProperty Name="Tipo_competicion" ColumnName="Tipo competicion" />
+                <ScalarProperty Name="Posicion" ColumnName="Posicion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="DatosJugador" FunctionName="nsProyecto.Store.DatosJugador">
             <ResultMapping>
               <ComplexTypeMapping TypeName="nsProyecto.DatosJugador_Result">
-                <ScalarProperty Name="nombreEquipo" ColumnName="nombreEquipo" />
-                <ScalarProperty Name="fechaContratacion" ColumnName="fechaContratacion" />
-                <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
-                <ScalarProperty Name="nbrCompeticion" ColumnName="nbrCompeticion" />
-                <ScalarProperty Name="nbrTipoCompeticion" ColumnName="nbrTipoCompeticion" />
+                <ScalarProperty Name="Equipo" ColumnName="Equipo" />
+                <ScalarProperty Name="Fecha_contratacion" ColumnName="Fecha contratacion" />
+                <ScalarProperty Name="Fecha_baja" ColumnName="Fecha baja" />
+                <ScalarProperty Name="Nombre_competicion" ColumnName="Nombre competicion" />
+                <ScalarProperty Name="Tipo_competicion" ColumnName="Tipo competicion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="Encuentros" FunctionName="nsProyecto.Store.Encuentros">
             <ResultMapping>
               <ComplexTypeMapping TypeName="nsProyecto.Encuentros_Result">
-                <ScalarProperty Name="codEquipo1" ColumnName="codEquipo1" />
-                <ScalarProperty Name="codEquipo2" ColumnName="codEquipo2" />
-                <ScalarProperty Name="golesEquipo1" ColumnName="golesEquipo1" />
-                <ScalarProperty Name="golesEquipo2" ColumnName="golesEquipo2" />
-                <ScalarProperty Name="fecha" ColumnName="fecha" />
-                <ScalarProperty Name="nbrCompeticion" ColumnName="nbrCompeticion" />
+                <ScalarProperty Name="Equipo_1" ColumnName="Equipo 1" />
+                <ScalarProperty Name="Equipo_2" ColumnName="Equipo 2" />
+                <ScalarProperty Name="Goles_del_equipo_1" ColumnName="Goles del equipo 1" />
+                <ScalarProperty Name="Goles_del_equipo_2" ColumnName="Goles del equipo 2" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Nombre_de_la_competicion" ColumnName="Nombre de la competicion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -5357,24 +5347,12 @@
           <FunctionImportMapping FunctionImportName="Goleadores" FunctionName="nsProyecto.Store.Goleadores">
             <ResultMapping>
               <ComplexTypeMapping TypeName="nsProyecto.Goleadores_Result">
-                <ScalarProperty Name="nbrPersona" ColumnName="nbrPersona" />
-                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Goles" ColumnName="Goles" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="TablaGeneral" FunctionName="nsProyecto.Store.TablaGeneral">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="nsProyecto.TablaGeneral_Result">
-                <ScalarProperty Name="nbrEquipo" ColumnName="nbrEquipo" />
-                <ScalarProperty Name="pjugados" ColumnName="pjugados" />
-                <ScalarProperty Name="pganados" ColumnName="pganados" />
-                <ScalarProperty Name="pperdidos" ColumnName="pperdidos" />
-                <ScalarProperty Name="pempatados" ColumnName="pempatados" />
-                <ScalarProperty Name="gfavor" ColumnName="gfavor" />
-                <ScalarProperty Name="gcontra" ColumnName="gcontra" />
-                <ScalarProperty Name="ptotales" ColumnName="ptotales" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

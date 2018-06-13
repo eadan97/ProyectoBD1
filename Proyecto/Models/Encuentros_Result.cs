@@ -13,11 +13,11 @@ namespace Proyecto.Models
     
     public partial class Encuentros_Result
     {
-        public decimal codEquipo1 { get; set; }
-        public decimal codEquipo2 { get; set; }
-        public Nullable<decimal> golesEquipo1 { get; set; }
-        public Nullable<decimal> golesEquipo2 { get; set; }
-        public System.DateTime fecha { get; set; }
-        public string nbrCompeticion { get; set; }
+        public decimal Equipo_1 { get; set; }
+        public decimal Equipo_2 { get; set; }
+        public Nullable<decimal> Goles_del_equipo_1 { get; set; }
+        public Nullable<decimal> Goles_del_equipo_2 { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public string Nombre_de_la_competicion { get; set; }
     }
 }

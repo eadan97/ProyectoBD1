@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Proyecto.Models.Encuentros_Result>
+
+@{
+    ViewBag.Title = "Encuentros";
+}
+
+<h2>Encuentros entre encuentros</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Equipo 1
+        </th>
+        <th>
+            Equipo 2
+        </th>
+        <th>
+            Fecha
+        </th>
+        <th>
+            Goles del equipo 1
+        </th>
+        <th>
+            Goles del equipo 2
+        </th>
+        <th>
+            Nombre de la competicion
+        </th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equipo_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equipo_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Goles_del_equipo_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Goles_del_equipo_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_de_la_competicion)
+            </td>
+        </tr>
+    }
+
+</table>

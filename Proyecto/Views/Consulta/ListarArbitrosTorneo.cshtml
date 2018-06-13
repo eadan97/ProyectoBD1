@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Proyecto.Models.ArbitrosTorneo_Result>
+
+@{
+    ViewBag.Title = "Arbitros en torneo";
+}
+
+<h2>Arbitros en torneo</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model=>model.Promedio)
+        </th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Promedio)
+            </td>
+        </tr>
+    }
+
+</table>

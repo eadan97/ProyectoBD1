@@ -198,6 +198,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConsultaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -223,6 +224,7 @@
     <Compile Include="Models\Categoria.cs">
       <DependentUpon>dbProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConsultaViewModel.cs" />
     <Compile Include="Models\Competicion.cs">
       <DependentUpon>dbProyecto.tt</DependentUpon>
     </Compile>
@@ -438,6 +440,12 @@
     <Content Include="Views\Usuario\Details.cshtml" />
     <Content Include="Views\Usuario\Edit.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Consulta\ArbitrosTorneo.cshtml" />
+    <Content Include="Views\Consulta\ListarArbitrosTorneo.cshtml" />
+    <Content Include="Views\Consulta\Goleadores.cshtml" />
+    <Content Include="Views\Consulta\ListarGoleadores.cshtml" />
+    <Content Include="Views\Consulta\ListarEncuentros.cshtml" />
+    <Content Include="Views\Consulta\Encuentros.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

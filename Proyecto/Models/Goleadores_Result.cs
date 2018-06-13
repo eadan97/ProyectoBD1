@@ -13,7 +13,7 @@ namespace Proyecto.Models
     
     public partial class Goleadores_Result
     {
-        public string nbrPersona { get; set; }
-        public Nullable<int> Column1 { get; set; }
+        public string Nombre { get; set; }
+        public Nullable<int> Goles { get; set; }
     }
 }

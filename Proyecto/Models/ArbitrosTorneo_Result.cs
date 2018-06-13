@@ -13,7 +13,7 @@ namespace Proyecto.Models
     
     public partial class ArbitrosTorneo_Result
     {
-        public string nbrPersona { get; set; }
-        public Nullable<decimal> Column1 { get; set; }
+        public string Nombre { get; set; }
+        public Nullable<decimal> Promedio { get; set; }
     }
 }

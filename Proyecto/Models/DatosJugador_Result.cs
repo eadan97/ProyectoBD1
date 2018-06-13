@@ -13,10 +13,10 @@ namespace Proyecto.Models
     
     public partial class DatosJugador_Result
     {
-        public string nombreEquipo { get; set; }
-        public System.DateTime fechaContratacion { get; set; }
-        public System.DateTime fechaBaja { get; set; }
-        public string nbrCompeticion { get; set; }
-        public string nbrTipoCompeticion { get; set; }
+        public string Equipo { get; set; }
+        public System.DateTime Fecha_contratacion { get; set; }
+        public System.DateTime Fecha_baja { get; set; }
+        public string Nombre_competicion { get; set; }
+        public string Tipo_competicion { get; set; }
     }
 }
